@@ -240,17 +240,33 @@
 
 
 // 14
-let btn = document.querySelector('.b-14');
-let i14 = document.querySelectorAll('.i-14');
-let out = document.querySelector('.out-14');
+// let btn = document.querySelector('.b-14');
+// let i14 = document.querySelectorAll('.i-14');
+// let out = document.querySelector('.out-14');
 
-btn.onclick = function f14() {
-  for(i = 0; i < i14.length; i++) {
-    i14[0].value = 1;
-    i14[1].value = 2;
-    i14[2].value = 3;
-    if(i14[i].checked) {
-      out.innerHTML = i14[i].value;
-    }
+// btn.onclick = function f14() {
+//   for(i = 0; i < i14.length; i++) {
+//     i14[0].value = 1;
+//     i14[1].value = 2;
+//     i14[2].value = 3;
+//     if(i14[i].checked) {
+//       out.innerHTML = i14[i].value;
+//     }
+//   }
+// }
+
+
+let btn = document.querySelector('.b-15');
+let out15 = document.querySelector('.out-15');
+
+btn.onclick = function f15() {
+  let out1 = '';
+  for(i = 0; i <= 10; i++) {
+    out1 += (10 - i) + ' ' + i + ' ';
   }
+
+  
+
+  out15.innerHTML = out1;
+
 }
