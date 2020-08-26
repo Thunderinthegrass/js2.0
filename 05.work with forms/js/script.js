@@ -81,29 +81,29 @@
 // 4
 //переключатель языка и стилей
 
-let btn = document.querySelector('button');
-let out = document.querySelector('.out');
-let cont = document.querySelector('.container');
-let cb = document.querySelector('#cb');
-let en = document.querySelector('.en');
+// let btn = document.querySelector('button');
+// let out = document.querySelector('.out');
+// let cont = document.querySelector('.container');
+// let cb = document.querySelector('#cb');
+// let en = document.querySelector('.en');
 
-cb.onclick = () => {
+// cb.onclick = () => {
  
-  console.log(cb.checked);
-  if (cb.checked) {
-   out.innerHTML = ('Hello, Daria!')
-   en.style.textShadow = '0 0 5px #13b3ff, 0 0 15px #13b3ff';
-   en.style.color = '#13b3ff';
-  //  cont.style.backgroundColor = '#ffffff';
-  }
-  else {
-    out.innerHTML = ('Здравствуй, Дарья!')
-    en.style.textShadow = 'none';
-    en.style.color = '#517383';
-    cont.style.backgroundColor = '#292929';
-    cont.style.transition = '.5s';
-  }
-}
+//   console.log(cb.checked);
+//   if (cb.checked) {
+//    out.innerHTML = ('Hello, Daria!')
+//    en.style.textShadow = '0 0 5px #13b3ff, 0 0 15px #13b3ff';
+//    en.style.color = '#13b3ff';
+//   //  cont.style.backgroundColor = '#ffffff';
+//   }
+//   else {
+//     out.innerHTML = ('Здравствуй, Дарья!')
+//     en.style.textShadow = 'none';
+//     en.style.color = '#517383';
+//     cont.style.backgroundColor = '#292929';
+//     cont.style.transition = '.5s';
+//   }
+// }
 
 
 // 5
