@@ -1,6 +1,3 @@
-
-
-
 // 1  Напишите функцию t1, которая при нажатии кнопки выводит в out-1 переменную a1.
 // let a1 = 8;
 // function f1() {
@@ -96,17 +93,47 @@
 // 8
 // Напишите функцию t8, которая принимает строку в качестве параметра и возвращает результат с очищенными пробелами в начале и вконце строки. Т.е. принимает _hello_ (где знак _ символизирует пробел), а возвращает hello. Для удаления пробелов - используйте trim.
 
-function f8(hello = 'hello ') {
-  return out.innerHTML = hello.trim();
-}
+// function f8(a) { 
+//   out.innerHTML = a.trim();
+//   console.log(a.trim());
+// }
 
-let out = document.querySelector('.out');
+// let out = document.querySelector('.out');
 
-let btn = document.querySelector('.btn').onclick = function() {
-  f8();
-}
+// let btn = document.querySelector('.btn').onclick = function() {
+//   f8('   ggg   ');
+// }
 
-// 10
-function f9(one) {
+// 9 Напишите функцию t9, которая принимает число и возвращает true, если число четное, и false если не четное.
+// function f9(a) {
+//   if (a % 2 == 0) {
+//     out.innerHTML = true;
+//   }
+//   else {
+//     out.innerHTML = false;
+//   }
+// }
 
-}
+// let out = document.querySelector('.out');
+
+// let btn = document.querySelector('.btn').onclick = function() {
+//   f9(17);
+// }
+
+// 10Создайте функцию t10, которая принимает 2 числа и возвращает большее из них. В случае равенства - любое из чисел.
+// function f10(a,b) {
+//   if (a > b) {
+//     out.innerHTML = a;
+//   }
+//   else if (a < b) {
+//     out.innerHTML = b;
+//   }
+//   else {
+//     out.innerHTML = (a && b);
+//   }
+// }
+
+// let out = document.querySelector('.out');
+// let btn = document.querySelector('.btn').onclick = function() {
+//   f10(15,1);
+// };

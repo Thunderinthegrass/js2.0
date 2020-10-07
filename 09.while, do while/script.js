@@ -2,45 +2,47 @@
 //   console.log(i);
 // }
 
-// let k = 0;
+
+// let k = 3;
 // while (k < 5) {
-//   console.log('k' + k);
 //   k++;
+//   console.log( 'k:' + k );
 // }
 
-// находим сумму чисел от 1 до 10
-// let a = 0;
-// let i = 0;
+// let z = 3;
+// while (z < 8) {
+//   console.log( 'z:' + z);
+//   // if (z == 5) continue; эта строчка введёт цикл в бесконечный режим, т.к. инструкция continue прерывает выполнение текущей итерации текущего или отмеченного цикла, и продолжает его выполнение на следующей итерации.
+//   z++;
+// } 
 
-// while(a < 11) {
-//   i = i + a;
-//   a++;
+// находим сумму чисул от 0 до 10
+// let k = 0;
+// let z = 0;
+
+// while (k < 10) {
+//   k++;
+//   z = z + k;
 // }
+// console.log('сумма чисел от 1 до 10 = ' + z);
 
-// console.log(i);
 
 
-// выводим звёздочки
+// выводим фигуру: 
+// ****
+// ****
+// ****
 let out = document.querySelector('.out');
-
-let p = 0;
+let k = 0;
 let outStr = '';
-let flag = 3;
-
-while(p < 4){
-  let p1 = 0;
-  while(p1 < 4) {
-    if(p1 < flag){
-      outStr += '&nbsp';
-    }
-    else{
-      outStr += '*';
-    }
-    p1++; 
+while (k < 4) {
+  let k1 = 0;
+  while(k1 < 4) {
+  outStr += '*'
+  k1++;
   }
-  flag--;
   outStr += '<br>';
-  p++;
+  k++;
 }
 
 out.innerHTML = outStr;
