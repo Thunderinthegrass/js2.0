@@ -229,33 +229,45 @@
 // если ввел 8 и 6, то получим
 // 6 7 8
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл while.
-let out = document.querySelector('.out');
-let inp = document.querySelector('.inp');
-let inp1 = document.querySelector('.inp-1');
+// let out = document.querySelector('.out');
+// let inp = document.querySelector('.inp');
+// let inp1 = document.querySelector('.inp-1');
 
-let btn = document.querySelector('.btn').onclick = function f4() {
-  let i1 = inp1.value;
-  let i = inp.value;
-  if (i1 > i) {
-    while (i <= i1) {
-      out.innerHTML += i + ' ';
-      i++;
-    }
-  }
-  else if (i > i1) {
-    while (i >= i1) {
-      out.innerHTML += i1 + ' ';
-      i1++;
-    }
-  }
-}
+// let btn = document.querySelector('.btn').onclick = function f4() {
+//   let i1 = inp1.value;
+//   let i = inp.value;
+//   if (i1 > i) {
+//     while (i <= i1) {
+//       out.innerHTML += i + ' ';
+//       i++;
+//     }
+//   }
+//   else if (i > i1) {
+//     while (i >= i1) {
+//       out.innerHTML += i1 + ' ';
+//       i1++;
+//     }
+//   }
+// }
 
 
 // Task 10.
 // Кнопка b-10 запускает функцию t10. Функция должна выводить в out-10 четные годы от 1950 до 2000 включительно. Разделитель - пробел. Задача решается через цикл while, а четность - через шаг (равный 2).
+// let out = document.querySelector('.out');
+
+// let btn = document.querySelector('.btn').onclick = function f4() {
+//   let k = 1950;
+//   while (k <= 2000) {
+//     out.innerHTML += k + ' ';
+//     k = k + 2;
+//   }
+// }
+
 
 // Task 11.
-// Кнопка b-11 запускает функцию t11. Функция должна: получить все div.div-11 перебрать их с помощью цикла while. Обращение к div выглядит так elem[i] вывести в out-11 содержимое каждого блока. Разделитель - пробел. В результате должно получиться так:
+// Кнопка b-11 запускает функцию t11. Функция должна: получить все div.div-11 перебрать их с помощью цикла while. Обращение к div выглядит так elem[i] вывести в out-11 содержимое каждого блока. Разделитель - пробел. В результате должно получиться так: one 3 4 two
+
+
 
 // one 3 4 two
 // Task 12.
