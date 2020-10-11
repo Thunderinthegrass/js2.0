@@ -256,17 +256,17 @@
 // }
 
 
-let btn = document.querySelector('.b-15');
-let out15 = document.querySelector('.out-15');
+// let btn = document.querySelector('.b-15');
+// let out15 = document.querySelector('.out-15');
 
-btn.onclick = function f15() {
-  let out1 = '';
-  for(i = 0; i <= 10; i++) {
-    out1 += (10 - i) + ' ' + i + ' ';
-  }
+// btn.onclick = function f15() {
+//   let out1 = '';
+//   for(i = 0; i <= 10; i++) {
+//     out1 += (10 - i) + ' ' + i + ' ';
+//   }
 
   
 
-  out15.innerHTML = out1;
+//   out15.innerHTML = out1;
 
-}
+// }

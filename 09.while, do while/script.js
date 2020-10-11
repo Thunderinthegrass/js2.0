@@ -111,14 +111,14 @@
 // Кнопка b-3 запускает функцию t3. Функция должна выводить в out-3 строку вида:
 // 25 24 23 22 . . 7
 // от 25 до 7 c шагом 1. Разделитель - пробел. Задача решается с помощью цикла while.
-  // let out = document.querySelector('.out');
-  // let btn = document.querySelector('.btn').onclick = function f3() {
-  //   let k = 26;
-  //   while (k > 7) {
-  //     k--;
-  //     out.innerHTML += k + ' ';
-  //   }
-  // }
+// let out = document.querySelector('.out');
+// let btn = document.querySelector('.btn').onclick = function f3() {
+//   let k = 26;
+//   while (k > 7) {
+//     k--;
+//     out.innerHTML += k + ' ';
+//   }
+// }
 
 
 // Task 4.
@@ -163,7 +163,7 @@
 // ******
 
 // ******
- 
+
 // ******
 
 // Задача решается с помощью цикла. В каждой итерации цикл выводит 6 звездочек без пробелов и символ переноса строки br. Количество строк (итераций, повторений) цикла while вводит пользователь в i-6.
@@ -266,21 +266,80 @@
 
 // Task 11.
 // Кнопка b-11 запускает функцию t11. Функция должна: получить все div.div-11 перебрать их с помощью цикла while. Обращение к div выглядит так elem[i] вывести в out-11 содержимое каждого блока. Разделитель - пробел. В результате должно получиться так: one 3 4 two
+// let out = document.querySelector('.out');
+// let d11 = document.querySelectorAll('.div-11')
+
+// let btn = document.querySelector('.btn').onclick = function f4() {
+//   let k = 0;
+//   while (k < 4) {
+//     out.innerHTML += d11[k].innerHTML + ' ';
+//     k++
+//   }
+// }
 
 
 
-// one 3 4 two
 // Task 12.
 // Кнопка b-12 запускает функцию t12. Функция должна: получить все div.div-12 перебрать их с помощью цикла while. Обращение к div выглядит так elem[i] применить к каждому elem[i].style.background = ‘orange’
+// let out = document.querySelector('.out');
+// let d11 = document.querySelectorAll('.div-11')
+
+// let btn = document.querySelector('.btn').onclick = function f4() {
+//   let k = 0;
+//   while (k < 5) {
+//     d11[k].style.background = 'orange';
+//     k++;
+//   }
+// }
+
 
 // Task 13.
 // Кнопка b-13 запускает функцию t13. Функция должна: получить все input.i-13 перебрать их с помощью цикла while. Обращение к элементу выглядит так elem[i] применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
 
+// let inp = document.querySelectorAll('.i-13');
+// let btn = document.querySelector('.btn').onclick = function f4() {
+//   let k = 0;
+//   while (k < 1) {
+//     inp[0].value += 1;
+//     inp[1].value += 2;
+//     inp[2].value += 3;
+//     inp[3].value += 4;
+//     inp[4].value += 5;
+//     k++;
+//   }
+// }
+
+
 // Task 14.
 // Кнопка b-14 запускает функцию t14 Функция должна: получить все input.i-14 перебрать их с помощью цикла while. Обращение к элементу выглядит так elem[i] вывести в out-14 value выбранного. Проверить выбран ли элемент можно с помощью elem[i].checked.
 
+// let inp = document.querySelectorAll('.i-13');
+// let out = document.querySelector('.out');
+// let btn = document.querySelector('.btn').onclick = function f4() {
+//   let k = 0;
+//   while (k < inp.length) {
+//     inp[0].value = 1;
+//     inp[1].value = 2;
+//     inp[2].value = 3;
+//     inp[3].value = 4;
+//     inp[4].value = 5;
+//     if (inp[k].checked) {
+//       out.innerHTML = inp[k].value;
+//     }
+//     k++;
+//   }
+// }
+
+
 // Task 15.
 // Кнопка b-15 запускает функцию t15 Функция должна выводить следующую последовательность в out-15:
-
 // 10 0 9 1 8 2 7 3 6 4 5 5 4 6 3 7 2 8 1 9 0 10
 // Для вывода использовать цикл while.
+let out = document.querySelector('.out');
+let btn = document.querySelector('.btn').onclick = function f4() {
+  let k = 0;
+  while (k < 10) {
+    out.innerHTML += (10 - k) + ' ' + k + ' ';
+    k++;
+  }
+}
