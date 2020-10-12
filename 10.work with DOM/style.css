@@ -1,0 +1,92 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto;
+}
+.text-center {
+  text-align: center;
+}
+
+.one {
+  background: bisque;
+}
+
+.two {
+  background: orange;
+}
+
+.three {
+  border: 2px solid red;
+}
+.btn-lesson{
+  background: rgb(185, 15, 207);
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+}
+.btn-lesson:focus{
+  outline: none;
+}
+.active{
+  background: rgb(15, 204, 195);
+}
+
+
+.out{
+  display: inline-block;
+  background: rgb(22, 223, 146);
+  /* background: rgb(50, 226, 159); */
+  color: rgb(255, 255, 255);
+}
+.wrapper{
+  display: flex;
+  justify-content: center;
+}
+.block{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block-1{
+  background: #283354;
+}
+.block-2{
+  background: #285454;
+}
+.block-3{
+  background: #522854;
+}
+.block-4{
+  background: #542828;
+}
+.block-5{
+  background: #285428;
+}
+.block__item{
+  width: 50px;
+  height: 50px;
+}
+.block__item-1{
+  background: #D54132;
+}
+.block__item-2{
+  background: #d532b2;
+}
+.block__item-3{
+  background: #32d589;
+}
+.block__item-4{
+  background: #3299d5;
+}
+.block__item-5{
+  background: #d56e32;
+}
