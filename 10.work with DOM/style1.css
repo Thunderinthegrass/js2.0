@@ -1,0 +1,34 @@
+body{
+  background: rgb(77, 97, 141);
+  font-family: 'Roboto', sans-serif;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+.gasoline-counter-wrapper{
+  padding: 10px;
+  border: 1px solid #ffffff;
+  display: inline-block;
+  text-align: center;
+}
+.counter-title{
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+.result{
+  height: 20px;
+  width: 100px;
+  background: rgb(240, 109, 218);
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.circle{
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background: rgb(94, 241, 113);
+}
+.border{
+  border: 3px solid #a6e4bb;
+}

@@ -1,5 +1,6 @@
-body {
+/* body {
   font-family: 'Roboto', sans-serif;
+  background: rgb(97, 133, 90);
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
@@ -15,9 +16,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .one {
   background: bisque;
-}
+} */
 
-.two {
+/* .two {
   background: orange;
 }
 
@@ -38,14 +39,71 @@ h1, h2, h3, h4, h5, h6 {
   background: rgb(15, 204, 195);
 }
 
+p{
+  margin: 0;
+  padding: 0;
+}
+.gasoline-counter-wrapper{
+  padding: 10px;
+  border: 1px solid #ffffff;
+  display: inline-block;
+  text-align: center;
+}
+.counter-title{
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+.result{
+  height: 20px;
+  width: 100px;
+  background: rgb(109, 231, 240);
+  margin: 0 auto;
+  margin-bottom: 10px;
+} */
 
-.out{
+
+
+/* .out{
   display: inline-block;
   background: rgb(22, 223, 146);
-  /* background: rgb(50, 226, 159); */
+  background: rgb(50, 226, 159);
   color: rgb(255, 255, 255);
+} */
+
+
+/* Задания --------------------- */
+.container{
+  height: 100vh;
 }
-.wrapper{
+.btn{
+  display: inline-block;
+  border: 10px solid #80dd15;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.out{
+  background: rgb(128, 203, 226);
+  width: 400px;
+  height: 40px;
+}
+/* .out-1{
+  background: rgb(226, 71, 187);
+} */
+.bg-2{
+  background: rgb(17, 226, 111);
+}
+.bg-3{
+  background: rgb(85, 218, 189);
+}
+
+
+
+
+
+
+
+/* .wrapper{
   display: flex;
   justify-content: center;
 }
@@ -89,4 +147,4 @@ h1, h2, h3, h4, h5, h6 {
 }
 .block__item-5{
   background: #d56e32;
-}
+} */
