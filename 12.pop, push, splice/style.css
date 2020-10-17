@@ -1,0 +1,55 @@
+
+/* Задания --------------------- */
+.out{
+  background: rgb(11, 232, 184);
+}
+
+
+
+
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+}
+.block{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block-1{
+  background: #283354;
+}
+.block-2{
+  background: #285454;
+}
+.block-3{
+  background: #522854;
+}
+.block-4{
+  background: #542828;
+}
+.block-5{
+  background: #285428;
+}
+.block__item{
+  width: 50px;
+  height: 50px;
+}
+.block__item-1{
+  background: #D54132;
+}
+.block__item-2{
+  background: #d532b2;
+}
+.block__item-3{
+  background: #32d589;
+}
+.block__item-4{
+  background: #3299d5;
+}
+.block__item-5{
+  background: #d56e32;
+}
