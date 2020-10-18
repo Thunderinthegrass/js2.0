@@ -22,13 +22,13 @@
 //Задания--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Task 1.
 // Есть массив d1, кнопка b-1, input i-1. Напишите функцию f1, которая при нажатии читает i-1 и добавляем его в массив. После чего выводит массив в .out-1. Поскольку мы будем выводить массив d1 неоднократно, то давайте вывод массива сделаем отдельной функцией, showArr - она подготовлена. Изучите ее - это хороший способ оптимизировать код.
-let a = [33, 'best', 66, 'best'];
-let out = document.querySelector('.out');
-let inp = document.querySelector('.inp');
+// let a = [33, 'best', 66, 'best'];
+// let out = document.querySelector('.out');
+// let inp = document.querySelector('.inp');
 
-function showA() {
-  out.innerHTML = a;
-}
+// function showA() {
+//   out.innerHTML = a;
+// }
 
 // let btn = document.querySelector('.btn').onclick = function() {
 //   let v = inp.value;
@@ -41,6 +41,8 @@ function showA() {
 
 // Task 2.
 // Напишите функцию f2, которая применяет метод pop к массиву d1, а затем выводит его (showArr) в .out-2
+
+
 // let btn = document.querySelector('.btn').onclick = function() {
 //   a.pop();
 //   showA();
@@ -75,10 +77,41 @@ function showA() {
 
 // Task 6.
 // Напишите функцию f6, которая эмулирует работу метода push применительно к массиву d6. Т.е. добавляет значение из i-6 как последний элемент в массив d6. Эмуляция, значит, что мы получим результат аналогичный методу push без применения его. Эмуляция заключается в присвоение значения как последнего элемента массива. Как вычислить индекс последнего элемента используя длину массива - вы знаете из предыдущего урока. Повторный запуск функции должен также приводить к добавлению элемента.
+// let a = ['test', 5, 12];
+
+// let out = document.querySelector('.out');
+// let inp = document.querySelector('.inp');
+
+// function showA() {
+//   out.innerHTML = a;
+// }
+
+// let btn = document.querySelector('.btn').onclick = function() {
+//   let b = inp.value;
+//   a[a.length] = b;
+//   showA();
+// }
+
 
 // d6 = ['test', 5, 12];
 // Task 7.
 // Напишите функцию f7, которая эмулирует метод pop, т.е. удаляет последний элемент массива d7. Эмулировать - получать результат аналогичный pop, но без применения pop. Функция может быть вызвана много раз, при этом каждый раз должен удаляться последний элемент d7.
+let a = ['china', 'india', 'brazil', 'japan', 'egypt'];
+let out = document.querySelector('.out');
+let inp = document.querySelector('.inp');
+function showA() {
+  out.innerHTML = a;
+}
+
+let btn = document.querySelector('.btn').onclick = function() {
+  let b = [];
+  for (let k = 0; k < a.length - 1; k++) {
+    b[k] = a[k];
+  }
+  a = b;
+  out.innerHTML = a;
+}
+
 
 //             d7 = ['china', 'india', 'brazil', 'japan', 'egypt'];
 
