@@ -96,41 +96,89 @@
 // d6 = ['test', 5, 12];
 // Task 7.
 // Напишите функцию f7, которая эмулирует метод pop, т.е. удаляет последний элемент массива d7. Эмулировать - получать результат аналогичный pop, но без применения pop. Функция может быть вызвана много раз, при этом каждый раз должен удаляться последний элемент d7.
-let a = ['china', 'india', 'brazil', 'japan', 'egypt'];
-let out = document.querySelector('.out');
-let inp = document.querySelector('.inp');
-function showA() {
-  out.innerHTML = a;
-}
+// let a = ['china', 'india', 'brazil', 'japan', 'egypt'];
+// let out = document.querySelector('.out');
+// let inp = document.querySelector('.inp');
+// function showA() {
+//   out.innerHTML = a;
+// }
 
-let btn = document.querySelector('.btn').onclick = function() {
-  let b = [];
-  for (let k = 0; k < a.length - 1; k++) {
-    b[k] = a[k];
-  }
-  a = b;
-  out.innerHTML = a;
-}
+// let btn = document.querySelector('.btn').onclick = function() {
+//   let b = [];
+//   for (let k = 0; k < a.length - 1; k++) {
+//     b[k] = a[k];
+//   }
+//   a = b;
+//   out.innerHTML = a;
+// }
 
 
 //             d7 = ['china', 'india', 'brazil', 'japan', 'egypt'];
 
 // Task 8.
 // Напишите функцию f8, которая эмулирует работу метода unShift - добавляем значение из i-8 в начало массива d8.
+// let a = [2,'4', 12, 67, 'hello'];
+// let out = document.querySelector('.out');
+// let inp = document.querySelector('.inp');
+
+// let btn = document.querySelector('.btn').onclick = function() {
+//   let s = inp.value;
+//   let b = [s];
+//   for (let k = 0; k < a.length; k++) {
+//     console.log(b);
+//     b[k + 1] = a[k];
+//   }
+//   a = b;
+//   out.innerHTML = a;
+// }
+
 
 //              d8 = [2,'4', 12, 67, 'hello'];
 
 // Task 9.
 // Напишите функцию f8, которая эмулирует работу метода shift - на примере массива d9.
+// let a = [100, 200, 300, 400, 700, 121];
+// let inp = document.querySelector('.inp');
+// let out = document.querySelector('.out')
+
+// let btn = document.querySelector('.btn').onclick = function() {
+//   let b = [];
+//   for (let k = 1; k < a.length; k++) {
+//     b[k - 1] = a[k];
+//   }
+//   a = b;
+//   out.innerHTML = a;
+//   console.log(a);
+// }
+
 
 //             d9 = [100, 200, 300, 400, 700, 121];
 
 // Task 10.
 // Напишите функцию f10, которая применяет к массиву d10 метод reverse и выводит полученный массив в out-10
+// let a = [3,14,15,92,6];
+// let inp = document.querySelector('.inp');
+// let out = document.querySelector('.out')
+
+// let btn = document.querySelector('.btn').onclick = function() {
+//   a = a.reverse();
+//   out.innerHTML = a;
+// }
+
 
 // d10 = [3,14,15,92,6];
 // Task 11.
 // Напишите функцию, которая получает число из input i-11, переводит в число, и с помощью метода indexOf проверяет наличие в массиве d11. Функция выводит в out-11 -1 если такого числа нет в массиве, либо его индекс в массиве.
+let a = [2,3,4,5,6,7];
+let inp = document.querySelector('.inp');
+let out = document.querySelector('.out')
+
+let btn = document.querySelector('.btn').onclick = function() {
+  let v = inp.value;
+  let n = Number(v);
+   
+}
+
 
 // d11 = [2,3,4,5,6,7];
 // Task 12.
