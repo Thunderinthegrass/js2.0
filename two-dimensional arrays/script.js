@@ -255,31 +255,31 @@ let out = document.querySelector('.out');
 // Task 10
 // При нажатии b-10 выполняете функцию f10. Функция должна вывести в out-10 значения из массива a10, которые являются строкой. Используем цикл. Вывод - через пробел.
 
-function f10() {
-  let z = '';
-  let a10 = [
-      [-2, '7', -3],
-      [3, 4, -7],
-      [-5, 6, -8, 32, 'a'],
-      ['st', 21, -34, -43],
-      [44, -56, 'task']
-  ];
+// function f10() {
+//   let z = '';
+//   let a10 = [
+//       [-2, '7', -3],
+//       [3, 4, -7],
+//       [-5, 6, -8, 32, 'a'],
+//       ['st', 21, -34, -43],
+//       [44, -56, 'task']
+//   ];
 
-  
 
-  for (let i = 0; i < a10.length; i++) {
-    for (let k = 0; k < a10[i].length; k++) {
-      if (typeof(a10[i][k]) == "string") {
-        z += a10[i][k] + ' ';
-      }
-    }
-  }
 
-  out.innerHTML = z;
+//   for (let i = 0; i < a10.length; i++) {
+//     for (let k = 0; k < a10[i].length; k++) {
+//       if (typeof(a10[i][k]) == "string") {
+//         z += a10[i][k] + ' ';
+//       }
+//     }
+//   }
 
-}
+//   out.innerHTML = z;
 
-document.querySelector('.btn').onclick = f10;
+// }
+
+// document.querySelector('.btn').onclick = f10;
 
 
 // Task 11
@@ -292,15 +292,24 @@ document.querySelector('.btn').onclick = f10;
 // ];
 
 // function f11() {
-//   let out = '';
+//   let z = '';
+//   for (let i = 0; i < a11.length; i++) {
+//     for (let k = a11[i].length -1; k >= 0; k--) {
+//       z += a11[i][k] + ' ';
+//     }
+//   }
+//   out.innerHTML = z;
+//   console.log(z);
 // }
 
-// document.querySelector('.b-11').onclick = f11;
+
+// document.querySelector('.btn').onclick = f11;
 
 // Task 12
 // Дан массив a12 который моделирует шахматную доску. Используя цикл выведите в out-12 единицы из этого массива. Все действия в функции f12. Функция запускается при нажатии на b12. Вывод через пробел.
 
 // function f12() {
+//   let z = '';
 //   let a12 = [
 //       [0,1,0,1,0,1,0,1],
 //       [1,0,1,0,1,0,1,0],
@@ -311,20 +320,52 @@ document.querySelector('.btn').onclick = f10;
 //       [0,1,0,1,0,1,0,1],
 //       [1,0,1,0,1,0,1,0],
 //   ];
+
+//   for (let i = 0; i < a12.length; i++) {
+//       z += '<br>';
+//     for (let k = 0; k < a12[i].length; k++) {
+//       if (a12[i][k] == 1) {
+//         z += a12[i][k] + ' ';
+//       }      
+//     }
+//   }
+//   out.innerHTML = z;
 // }
 
-// document.querySelector('.b-12').onclick = f12;
+// document.querySelector('.btn').onclick = f12;
 
 // Task 13
 // При нажатии b-13 выполняете функцию f13. Функция должна присвоить переменной a13 массив эмулирующий шахматную доску. Причем массив должен создаваться с помощью циклов. Для проверки - выведите массив в консоль.
 
-// let a13 = [];
+// let a = [];
 
 // function f13() {
+//   let z = 0;
+//   for (let i = 0; i < 9; i++) {
+//     let b = [];
 
+//     for (let k = 0; k < 8; k++) {
+//       b.push(z);
+//       if (z == 1) {
+//         z = 0;
+//       }
+//       else {
+//         z = 1;
+//       }
+//     }
+
+//     if (z == 0) {
+//       z = 1;
+//     }
+//     else {
+//       z = 0;
+//     }
+//     a.push(b);
+//   }
+//   console.log(a);
 // }
 
-// document.querySelector('.b-13').onclick = f13;
+// document.querySelector('.btn').onclick = f13;
 
 // Task 14
 // При нажатии b-14 выполняете функцию f14. Функция должна вывести в out-14 длины вложенных в a14 массивов. Через пробел.
@@ -339,10 +380,14 @@ document.querySelector('.btn').onclick = f10;
 // ];
 
 // function f14() {
-
+//   let z = '';
+//   for (let i = 0; i < a14.length; i++) {
+//     z += a14[i].length;
+//   }
+//   out.textContent = z;
 // }
 
-// document.querySelector('.b-14').onclick = f14;
+// document.querySelector('.btn').onclick = f14;
 
 // Task 15
 // При нажатии b-15 выполняете функцию f15. Функция должна вывести в out-15 длину самого большого вложенного массива в a15.
@@ -357,10 +402,18 @@ document.querySelector('.btn').onclick = f10;
 // ];
 
 // function f15() {
-
+//   let z = '';
+//   let x = 0;
+//   for (let i = 1; i < a15.length; i++) {
+//     z += a15[i].length;
+//     if (a15[i].length > a15[i - 1].length) {
+//       x = i;
+//     }
+//   }
+//   out.textContent = x;
 // }
 
-// document.querySelector('.b-15').onclick = f15;
+// document.querySelector('.btn').onclick = f15;
 
 // Task 16
 // Впишите в переменную a16 массив, который соответствует всем условиям приведенным ниже ( все console.log должны дать true;
@@ -375,24 +428,28 @@ document.querySelector('.btn').onclick = f10;
 
 // console.group('Task 16 ================');
 // console.log(a16[3] == 8);
+// console.log(a16[0][0] == 0);
 // console.log(a16[0][1] == 7);
+// console.log(a16[0][2] == 0);
 // console.log(a16[0][3] == 6);
 
 // console.groupEnd();
-
 
 // Task 17
 // Впишите в переменную a17 массив, который соответствует всем условиям приведенным ниже ( все console.log должны дать true;
 //  Т.е вы руками просто пишите массив такой, чтобы условия выполнялись.
 
 // let a17 = [
-
+//   [1,1,6],
+//   [1,7,6],
+//   [1,1,6],
+//   [1,1,8],
 // ];
 
 // console.group('Task 17 ================');
-// // console.log(a17[3][2] == 8);
-// // console.log(a17[1][1] == 7);
-// // console.log(a17[0][2] == 6);
+// console.log(a17[3][2] == 8);
+// console.log(a17[1][1] == 7);
+// console.log(a17[0][2] == 6);
 
 // console.groupEnd();
 
@@ -401,13 +458,17 @@ document.querySelector('.btn').onclick = f10;
 //  Т.е вы руками просто пишите массив такой, чтобы условия выполнялись.
 
 // let a18 = [
-
+//   3,
+//   8,
+//   [1,12],
+//   [8],
+//   [8]
 // ];
 
 // console.group('Task 18 ================');
-// // console.log(a18[0] == 3);
-// // console.log(a18[4][0] == 8);
-// // console.log(a18[2][1] == 12);
+// console.log(a18[0] == 3);
+// console.log(a18[4][0] == 8);
+// console.log(a18[2][1] == 12);
 
 // console.groupEnd();
 
@@ -416,13 +477,15 @@ document.querySelector('.btn').onclick = f10;
 //  Т.е вы руками просто пишите массив такой, чтобы условия выполнялись.
 
 // let a19 = [
-
+// [[0,3]],
+// [[1,2,8]],
+// [1,[12]]
 // ];
 
 // console.group('Task 19 ================');
-// // console.log(a19[0][0][1] == 3);
-// // console.log(a19[1][0][2] == 8);
-// // console.log(a19[2][1][0] == 12);
+// console.log(a19[0][0][1] == 3);
+// console.log(a19[1][0][2] == 8);
+// console.log(a19[2][1][0] == 12);
 
 // console.groupEnd();
 
@@ -431,12 +494,15 @@ document.querySelector('.btn').onclick = f10;
 //  Т.е вы руками просто пишите массив такой, чтобы условия выполнялись.
 
 // let a20 = [
-
+// [],
+// [8,[9,9]],
+// [1,18,18],
+// 12,
 // ];
 
 // console.group('Task 20 ================');
-// // console.log(a19[1][1][1] == 9);
-// // console.log(a19[2][2] == 18);
-// // console.log(a19[3]== 12);
+// console.log(a20[1][1][1] == 9);
+// console.log(a20[2][2] == 18);
+// console.log(a20[3]== 12);
 
 // console.groupEnd();
