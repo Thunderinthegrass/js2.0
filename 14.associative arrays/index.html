@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Pop, push, splice</title>
+</head>
+
+<body>
+  <!-- --------------------------------------------------------------------------------- -->
+  <!-- <p class="lessons-code">Код урока</p>-->
+  
+
+  <!-- Задания -->
+  <button class="btn">Жмяк</button>
+  <input type="text" class="inp">
+  <div class="out"></div>
+
+  <!-- шары канвас -->
+  <!-- <style>
+    html {
+      width: 100%;
+      height: inherit;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    button {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+    }
+  </style>
+
+  <button>Update</button>
+
+  <canvas></canvas>
+
+  <script>
+    const btn1 = document.querySelector('button');
+    const canvas = document.querySelector('canvas');
+    const ctx = canvas.getContext('2d');
+
+    let WIDTH = document.documentElement.clientWidth;
+    let HEIGHT = document.documentElement.clientHeight;
+
+    canvas.width = WIDTH;
+    canvas.height = HEIGHT;
+
+    function random(number) {
+      return Math.floor(Math.random()*number);
+    }
+
+    function draw() {
+      ctx.clearRect(0,0,WIDTH,HEIGHT);
+      for(let i = 0; i < 100; i++) {
+        ctx.beginPath();
+        ctx.fillStyle = 'rgba(255,0,0,0.5)';
+        ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+        ctx.fill();
+      }
+    }
+
+    btn1.addEventListener('click',draw);
+
+    </script> -->
+
+<!-- ------------------------------------------- -->
+
+  <div class="wrapper">
+    <div class="block block-1">
+      <div class="block__item block__item-1">
+
+      </div>
+    </div>
+    <div class="block block-2">
+      <div class="block__item block__item-2">
+
+      </div>
+    </div>
+    <div class="block block-3">
+      <div class="block__item block__item-3">
+
+      </div>
+    </div>
+    <div class="block block-4">
+      <div class="block__item block__item-4">
+
+      </div>
+    </div>
+    <div class="block block-5">
+      <div class="block__item block__item-5">
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,543 @@
+/* Задания --------------------- */
+body{
+  font-family: "Fira Sans", sans-serif;
+}
+.out {
+  background: rgb(11, 232, 184);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.block {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block-1 {
+  background: #283354;
+}
+
+.block-2 {
+  background: #285454;
+}
+
+.block-3 {
+  background: #522854;
+}
+
+.block-4 {
+  background: #542828;
+}
+
+.block-5 {
+  background: #285428;
+}
+
+.block__item {
+  width: 50px;
+  height: 50px;
+}
+
+.block__item-1 {
+  background: #D54132;
+}
+
+.block__item-2 {
+  background: #d532b2;
+}
+
+.block__item-3 {
+  background: #32d589;
+}
+
+.block__item-4 {
+  background: #3299d5;
+}
+
+.block__item-5 {
+  background: #d56e32;
+}
+
+/* anim------------------------ 1*/
+
+/* .anim-block-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.anim-block {
+  width: 100%;
+  height: 100%;
+  background: rgb(241, 214, 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.anim-block-item {
+  border-radius: 100%;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 10px solid #a83030;
+}
+.anim-block-item-1{
+  animation: block-item-1 2s linear infinite;
+  background: #000;
+  border: none;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+}
+.anim-block-item-2{
+  animation: block-item 2s linear infinite;
+  border-color: #149ff0;
+}
+.anim-block-item-3{
+  animation: block-item 2s linear .5s infinite;
+  border-color: #f014f0;
+}
+.anim-block-item-4{
+  animation: block-item 2s linear 1s infinite;
+  border-color: #14f039;
+}
+.anim-block-item-5{
+  animation: block-item 2s linear 1.5s infinite;
+  border-color: #14f094;
+}
+
+@keyframes block-item {
+  0% {
+    transform: translateX(0);
+  }
+  30%{
+    
+  }
+  
+  100% {
+    width: 3000px;
+    height: 3000px;
+    border: 10000px;
+  }
+}
+
+@keyframes block-item-1 {
+  0% {
+    transform: translateX(0);
+  }
+  30%{
+    
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+} */
+
+/* anim------------------------ 2*/
+
+/* .anim-block-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.anim-block {
+  width: 100%;
+  height: 100%;
+  background: rgb(241, 214, 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.anim-block-item {
+  border-radius: 100%;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+}
+.anim-block-item-1{
+  animation: block-item-1 2s linear infinite;
+  background: #000;
+  border: none;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+}
+.anim-block-item-2{
+  animation: block-item 2s linear 2s;
+  background-color: #059ff8;
+}
+.anim-block-item-3{
+  animation: block-item 2s linear .5s;
+  background-color: #f014f0;
+}
+.anim-block-item-4{
+  animation: block-item 2s linear 1s;
+  background-color: #14f039;
+}
+.anim-block-item-5{
+  animation: block-item 2s linear 1.5s;
+  background-color: #02fa93;
+}
+
+@keyframes block-item {
+  0% {
+    
+  }
+  30%{
+    
+  }
+  
+  100% {
+    width: 3000px;
+    height: 3000px;
+    
+  }
+}
+
+@keyframes block-item-1 {
+  0% {
+    
+  }
+  30%{
+    
+  }
+  
+  100% {
+    
+  }
+} */
+
+
+.anim-block-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.anim-block {
+  width: 100%;
+  height: 100%;
+  background: rgb(241, 214, 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.anim-block-item {
+  border-radius: 100%;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+  color: #302c2cea;
+  font-weight: bold;
+}
+.anim-block-item-1{
+  animation: block-item 1s linear forwards;
+  background-color: #6cf014;
+}
+.anim-block-item-2{
+  animation: block-item 1s linear 1s forwards;
+  background-color: #149ff0;
+}
+.anim-block-item-3{
+  animation: block-item 1s linear 2s forwards;
+  background-color: #f014f0;
+}
+.anim-block-item-4{
+  animation: block-item 1s linear 3s forwards;
+  background-color: #14f039;
+}
+.anim-block-item-5{
+  animation: block-item 1s linear 4s forwards;
+  background-color: #cff014;
+}
+.anim-block-item-6{
+  animation: block-item 1s linear 5s forwards;
+  background-color: #1473f0;
+}
+.anim-block-item-7{
+  animation: block-item 1s linear 6s forwards;
+  background-color: #9f14f0;
+}
+.anim-block-item-8{
+  animation: block-item 1s linear 7s forwards;
+  background-color: #f04714;
+}
+.anim-block-item-9{
+  animation: block-item 1s linear 8s forwards;
+  background-color: #6cf014;
+}
+.anim-block-item-10{
+  animation: block-item 1s linear 9s forwards;
+  background-color: #b5f014;
+}
+.anim-block-item-11{
+  animation: block-item 1s linear 10s forwards;
+  background-color: #14f0ae;
+}
+.anim-block-item-12{
+  animation: block-item 1s linear 11s forwards;
+  background-color: #f01414;
+}
+.anim-block-item-13{
+  animation: block-item 1s linear 12s forwards;
+  background-color: #5614f0;
+}
+.anim-block-item-14{
+  animation: block-item 1s linear 13s forwards;
+  background-color: #14bdf0;
+}
+.anim-block-item-15{
+  animation: block-item 1s linear 14s forwards;
+  background-color: #daf014;
+}
+.anim-block-item-16{
+  animation: block-item 1s linear 15s forwards;
+  background-color: #6114f0;
+}
+.anim-block-item-17{
+  animation: block-item 1s linear 16s forwards;
+  background-color: #c0f014;
+}
+.anim-block-item-18{
+  animation: block-item 1s linear 17s forwards;
+  background-color: #f01431;
+}
+.anim-block-item-19{
+  animation: block-item 1s linear 18s forwards;
+  background-color: #148df0;
+}
+.anim-block-item-20{
+  animation: block-item 1s linear 19s forwards;
+  background-color: #14f044;
+}
+.anim-block-item-21{
+  animation: block-item 1s linear 20s forwards;
+  background-color: #f014b9;
+}
+.anim-block-item-22{
+  animation: block-item 1s linear 21s forwards;
+  background-color: #b5f014;
+}
+.anim-block-item-23{
+  animation: block-item 1s linear 22s forwards;
+  background-color: #f07e14;
+}
+.anim-block-item-24{
+  animation: block-item 1s linear 23s forwards;
+  background-color: #1418f0;
+}
+.anim-block-item-25{
+  animation: block-item 1s linear 24s forwards;
+  background-color: #c0f014;
+}
+.anim-block-item-26{
+  animation: block-item 1s linear 25s forwards;
+  background-color: #f014f0;
+}
+.anim-block-item-27{
+  animation: block-item 1s linear 26s forwards;
+  background-color: #65f014;
+}
+.anim-block-item-28{
+  animation: block-item 1s linear 27s forwards;
+  background-color: #148df0;
+}
+.anim-block-item-29{
+  animation: block-item 1s linear 28s forwards;
+  background-color: #f014e5;
+}
+.anim-block-item-30{
+  animation: block-item 1s linear 29s forwards;
+  background-color: #f04714;
+}
+.anim-block-item-31{
+  animation: block-item 1s linear 30s forwards;
+  background-color: #14f056;
+}
+.anim-block-item-32{
+  animation: block-item 1s linear 31s forwards;
+  background-color: #14f0c0;
+}
+.anim-block-item-33{
+  animation: block-item 1s linear 32s forwards;
+  background-color: #9814f0;
+}
+.anim-block-item-34{
+  animation: block-item 1s linear 33s forwards;
+  background-color: #14f0a7;
+}
+.anim-block-item-35{
+  animation: block-item 1s linear 34s forwards;
+  background-color: #cff014;
+}
+.anim-block-item-36{
+  animation: block-item 1s linear 35s forwards;
+  background-color: #77f014;
+}
+.anim-block-item-37{
+  animation: block-item 1s linear 36s forwards;
+  background-color: #f0a314;
+}
+.anim-block-item-38{
+  animation: block-item 1s linear 37s forwards;
+  background-color: #9414f0;
+}
+.anim-block-item-39{
+  animation: block-item 1s linear 38s forwards;
+  background-color: #14bdf0;
+}
+.anim-block-item-40{
+  animation: block-item 1s linear 39s forwards;
+  background-color: #77f014;
+}
+.anim-block-item-41{
+  animation: block-item 1s linear 40s forwards;
+  background-color: #6cf014;
+}
+.anim-block-item-42{
+  animation: block-item 1s linear 41s forwards;
+  background-color: #6814f0;
+}
+.anim-block-item-43{
+  animation: block-item 1s linear 42s forwards;
+  background-color: #f0144b;
+}
+.anim-block-item-44{
+  animation: block-item 1s linear 43s forwards;
+  background-color: #cff014;
+}
+.anim-block-item-45{
+  animation: block-item 1s linear 44s forwards;
+  background-color: #14f01f;
+}
+.anim-block-item-46{
+  animation: block-item 1s linear 45s forwards;
+  background-color: #f09114;
+}
+.anim-block-item-47{
+  animation: block-item 1s linear 46s forwards;
+  background-color: #14f0e5;
+}
+.anim-block-item-48{
+  animation: block-item 1s linear 47s forwards;
+  background-color: #4f14f0;
+}
+.anim-block-item-49{
+  animation: block-item 1s linear 48s forwards;
+  background-color: #e914f0;
+}
+.anim-block-item-50{
+  animation: block-item 1s linear 49s forwards;
+  background-color: #d3f014;
+}
+.anim-block-item-51{
+  animation: block-item 1s linear 50s forwards;
+  background-color: #14c4f0;
+}
+.anim-block-item-52{
+  animation: block-item 1s linear 51s forwards;
+  background-color: #14f0ae;
+}
+.anim-block-item-53{
+  animation: block-item 1s linear 52s forwards;
+  background-color: #f0e114;
+}
+.anim-block-item-54{
+  animation: block-item 1s linear 53s forwards;
+  background-color: #daf014;
+}
+.anim-block-item-55{
+  animation: block-item 1s linear 54s forwards;
+  background-color: #f014e5;
+}
+.anim-block-item-56{
+  animation: block-item 1s linear 55s forwards;
+  background-color: #14f039;
+}
+.anim-block-item-57{
+  animation: block-item 1s linear 56s forwards;
+  background-color: #149ff0;
+}
+.anim-block-item-58{
+  animation: block-item 1s linear 57s forwards;
+  background-color: #f01414;
+}
+.anim-block-item-59{
+  animation: block-item 1s linear 58s forwards;
+  background-color: #f06c14;
+}
+.anim-block-item-60{
+  animation: block-item-60 1s linear 59s forwards;
+  background-color: #14f0b5;
+  text-align: center;
+}
+@keyframes block-item-60 {
+  0% {
+    transform: translateX(0);
+  }
+  30%{
+    
+  }
+  
+  100% {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0%;
+    font-size: 400px;
+  }
+}
+
+@keyframes block-item {
+  0% {
+    transform: translateX(0);
+  }
+  30%{
+    
+  }
+  
+  100% {
+    width: 3000px;
+    height: 3000px;
+    font-size: 1000px;
+  }
+}
+
+@keyframes block-item-1 {
+  0% {
+    transform: translateX(0);
+  }
+  30%{
+    
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}
