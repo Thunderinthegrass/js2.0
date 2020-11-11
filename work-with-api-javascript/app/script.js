@@ -7,6 +7,7 @@ fetch('http://api.openweathermap.org/data/2.5/weather?id=2051523&appid=75aad53b2
         document.querySelector('.disclaimer').textContent = data.weather[0]['description'];
         //https://openweathermap.org/img/wn/02d@2x.png
         document.querySelector('.features li').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png">`;
+        document.querySelector('.wind').innerHTML = Math.round(data.wind.speed) + 'm/с';
     })
     .catch(function () {
         // catch any errors
