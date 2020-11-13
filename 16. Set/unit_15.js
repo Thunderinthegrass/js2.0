@@ -1,38 +1,38 @@
 //код урока
-let a = new Set();//создаём новый сет
-console.log(a);//выводим его в консоль
-a.add('Привет');//добавляем строку
-console.log(a);
-a.add(17 - 8);//добавляем результат вычисления
-function plus(sl1, sl2) {
-    let z = sl1 + sl2;
-    return z;
-}
-a.add(plus(8, 30));//добавляем функцию
-console.log(a);
-console.log(a.size);//выведет размер, length здесь не сработает
-a.add(9);
-console.log(a);//вторая девятка не прибавится, т.к. сет сверяет все элементы с новыми, и выдаёт коллекцию уникальных элементов.
-console.log(a.has(9));//вернёт true, если элемент есть, и false, если нет
+// let a = new Set();//создаём новый сет
+// console.log(a);//выводим его в консоль
+// a.add('Привет');//добавляем строку
+// console.log(a);
+// a.add(17 - 8);//добавляем результат вычисления
+// function plus(sl1, sl2) {
+//     let z = sl1 + sl2;
+//     return z;
+// }
+// a.add(plus(8, 30));//добавляем функцию
+// console.log(a);
+// console.log(a.size);//выведет размер, length здесь не сработает
+// a.add(9);
+// console.log(a);//вторая девятка не прибавится, т.к. сет сверяет все элементы с новыми, и выдаёт коллекцию уникальных элементов.
+// console.log(a.has(9));//вернёт true, если элемент есть, и false, если нет
 
-//a.clear();//удалит все значения
-//a.delete(9);//удалит только 9
-//console.log(a[1]);так выведет undefined
+// //a.clear();//удалит все значения
+// //a.delete(9);//удалит только 9
+// //console.log(a[1]);так выведет undefined
 
-//цикл for of
-for (let item of a) {
-    console.log(item);
-}
+// // цикл for of
+// for (let item of a) {
+//     console.log(item);
+// }
 
-let arr = [1,3,4,2,1,2,3,54,4,3,2,3,4,5,4,45,4,56,54];
-let arrs = new Set(arr);
-console.log(arrs);//выведет коллекцию уникальных элементов, все дубли удалит
-console.log(arrs.size);//выведет размер
+// let arr = [1,3,4,2,1,2,3,54,4,3,2,3,4,5,4,45,4,56,54];
+// let arrs = new Set(arr);
+// console.log(arrs);//выведет коллекцию уникальных элементов, все дубли удалит
+// console.log(arrs.size);//выведет размер
 
-let c = Array.from(arrs);//преобразовываем в массив
-console.log(c);
-console.log(c[1]);//так выведет элемент массива под индексом 1
-console.log(c.length);//выведет сам знаешь что
+// let c = Array.from(arrs);//преобразовываем в массив
+// console.log(c);
+// console.log(c[1]);//так выведет элемент массива под индексом 1
+// console.log(c.length);//выведет сам знаешь что
 
 
 
@@ -41,16 +41,24 @@ console.log(c.length);//выведет сам знаешь что
 // Task 1
 // Создайте set s1. Добавьте в него три элемента 'h', 'b', 'o', 'h'. Добавление делайте через add. Выведите в консоль получившийся набор (set) s1.
 
-// let s1 = new ...
-
-
+let s1 = new Set();
+s1.add('h');
+s1.add('b');
+s1.add('o');
+s1.add('h');
+// console.log(s1);
 // Task 2
 // При нажатии b-2 выполняете функцию f2. Функция должна добавить в набор s2 элементы, которые пользователь вводит в i-2. Функция должна выводить в консоль s2 после каждого добавления элемента.
 
 
-// let s2 =
+let s2 = new Set();
 
-const f2 = () => { }
+
+const f2 = () => {
+    let inpV = document.querySelector('.i-2').value;
+    s2.add(inpV);
+    console.log(s2);
+}
 
 document.querySelector('.b-2').onclick = f2;
 
@@ -60,7 +68,15 @@ document.querySelector('.b-2').onclick = f2;
 
 let s3 = new Set(['one', 'two', 'four']); // обратите внимание, как просто можно добавить массив в набор!
 
-const f3 = () => { }
+const f3 = () => {
+    let iVal = document.querySelector('.i-3').value;
+    for (let str of s3) {
+        if (str == iVal) {
+            s3.delete(str);
+        }
+    }
+    console.log(s3);
+}
 
 document.querySelector('.b-3').onclick = f3;
 
@@ -68,9 +84,15 @@ document.querySelector('.b-3').onclick = f3;
 // Task 4
 // При нажатии b-4 выполняете функцию f4. Функция должна проверить наличие в наборе s4 строки введенной пользователем в i-4. Если строка есть - то вывести в out-4 true. Если нет - false.
 
+let out4 = document.querySelector('.out-4');
+
+
 let s4 = new Set(['a', 'b', 'c', 'z']);
 
-const f4 = () => { }
+const f4 = () => {
+    let iVal = document.querySelector('.i-4').value;
+    out4.innerHTML = (s4.has(iVal));
+}
 
 document.querySelector('.b-4').onclick = f4;
 
@@ -80,7 +102,10 @@ document.querySelector('.b-4').onclick = f4;
 
 let s5 = new Set(['a', 'b', 'c', 'z', 'a2', 'b2', 'c2', 'z2']);
 
-const f5 = () => { }
+let out5 = document.querySelector('.out-5');
+const f5 = () => {
+    out5.innerHTML = s5.size;
+}
 
 document.querySelector('.b-5').onclick = f5;
 
@@ -89,14 +114,33 @@ document.querySelector('.b-5').onclick = f5;
 
 let a6 = [1, 2, 3, 4, 5, 3, 4, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56];
 
-const f6 = () => { }
+const f6 = () => {
+    let arr = new Set(a6);//с помощью set удаляем одинаковые элементы из массива, но возвращает нам коллекцию set, поэтому нужно превратить её опять в массив.
+    let out6 = document.querySelector('.out-6');
+    a6 = Array.from(arr);//превращаем коллекцию обратно в массив
+    console.log(a6);
+    out6.innerHTML = a6.length;
+}
 
 document.querySelector('.b-6').onclick = f6;
 
 // Task 7
 // При нажатии b-7 выполняете функцию f7. Функция должна получать из i-7 значение пароля и проверять, чтобы пользователь в строке пароля использовал не повторяющиеся символы. Если символы уникальны, а длина пароля больше ( строго) 6 то выводите в out-7 число 1. Если есть повторяющиеся символы, или длина меньше или равна 6 - то выводите 0. Для проверки уникальности символов используйте Set.
+let out7 = document.querySelector('.out-7');
 
-const f7 = () => { }
+const f7 = () => {
+    let i = document.querySelector('.i-7');
+    let iVal = i.value;
+    let iValS = new Set(iVal);
+    if (iValS.size < iVal.length || iValS.size <= 6) {
+        out7.innerHTML = 0;
+    }
+    else {
+        out7.innerHTML = 1;
+    }
+    i.value = '';//для очистки строки обращаться напрямую к элементу, а не к его значению
+    console.log(iVal);
+}
 
 document.querySelector('.b-7').onclick = f7;
 
@@ -106,7 +150,15 @@ document.querySelector('.b-7').onclick = f7;
 let s8 = new Set([1, 2, 3, 4, 5, 3, 4, 7, 9, 5, 7, 8, 9, 23, 45, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56]);
 let ar8 = [];
 
-const f8 = () => { }
+const f8 = () => {
+    let out8 = document.querySelector('.out-8');
+    for (let i of s8) {
+        if (i > 5) {
+            ar8[ar8.length] = i;
+        }
+    }
+    out8.innerHTML = ar8;
+}
 
 document.querySelector('.b-8').onclick = f8;
 
@@ -114,7 +166,14 @@ document.querySelector('.b-8').onclick = f8;
 //  При нажатии b-9 выполняете функцию f9. Функция должна принимать набор our_set в качестве параметра, преобразовывать его в строку, причем после каждого символа строки должен быть пробел. Функция должна возвращать результирующую строку. 
 // В нашем примере результат должен быть 9_8_7_6_5_ (нижнее подчеркивание символизирует пробел)
 
-const f9 = our_set => { }
+let out9 = document.querySelector('.out-9');
+const f9 = (our_set) => {
+    let z = '';
+    for (let i of our_set) {
+        z += i + '_';
+    }
+    return z;
+}
 
 document.querySelector('.b-9').onclick = () => {
     let s9 = new Set([9, 8, 7, 6, 5]);
@@ -124,7 +183,14 @@ document.querySelector('.b-9').onclick = () => {
 // Task 10
 // При нажатии b-10 выполняете функцию f10. Функция должна принимать набор set в качестве параметра и выводить его в указанный элемент. Элемент указывается как второй параметр функции f10. Вывод значений - через пробел.
 
-const f10 = (out_set, elem) => { }
+const f10 = (out_set, elem) => {
+    let z = '';
+    for (let i of out_set) {
+        z += i + ' ';
+    }
+    document.querySelector(elem).innerHTML = z;
+}
+
 
 document.querySelector('.b-10').onclick = () => {
     let a10 = new Set(['4', '5', '6']);
