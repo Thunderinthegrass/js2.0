@@ -90,9 +90,12 @@ document.querySelector('.b-3').addEventListener('click', f3);
 
 // Task 4
 //При нажатии .b-4 выполняете функцию f4. Функция получает div.out-4 со страницы с помощью querySelectorAll и в каждый дописывает число 4.
+let out4 = document.querySelectorAll('.out-4');
 
 function f4() {
-
+    for (let i = 0; i < out4.length; i++) {
+        out4[i].innerHTML += 4;
+    }
 }
 
 document.querySelector('.b-4').addEventListener('click', f4);
@@ -103,7 +106,13 @@ document.querySelector('.b-4').addEventListener('click', f4);
 let a5 = [3,4,5,2,1,7,8,2,4,6,8,11,23,17];
 
 function f5() {
-
+    let a = [];
+    for (let item of a5) {
+        if (item > 7) {
+            a += item + ' ';
+        }
+    }
+    return a;
 }
 
 document.querySelector('.b-5').addEventListener('click', ()=> {
@@ -114,9 +123,17 @@ document.querySelector('.b-5').addEventListener('click', ()=> {
 //При нажатии .b-6 выполняете функцию f6. Функция должна превратить массив a6 в одномерный. Результат вывести в out-6 через пробел.
 
 let a6 = [[1,2], [3,4], [5,6]];
+let out6 = document.querySelectorAll('.out-6');
 
 function f6() {
-
+    let z = [];
+    for (let i = 0; i < a6.length; i++) {
+        for (let item of a6[i]) { 
+            z += item;
+            console.log(item);
+        }
+    }
+    out6.innerHTML = z;
 }
 
 document.querySelector('.b-6').addEventListener('click', f6);
