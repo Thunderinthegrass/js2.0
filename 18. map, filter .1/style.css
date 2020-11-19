@@ -1,0 +1,28 @@
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+}
+.word-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.word{
+  width: 177px;
+  height: 21px;
+  margin: 2px 0;
+  border: 1px solid #000000;
+}
+input{
+  display: block;
+    width: 170px;
+    height: 17px;
+  margin: 2px 0;
+}
+.btn{
+  background: rgb(0, 225, 255);
+  color: #ffffff;
+  border: none;
+  font-size: 30px;
+}

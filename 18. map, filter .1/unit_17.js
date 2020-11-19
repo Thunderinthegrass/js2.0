@@ -1,12 +1,59 @@
 //код урока
 let a = [1, 35, 70, 57, 3000, -17, 15, -3, 0];
+// let b = a.map((item, index) => {
+//     console.log(item);
+//     item = item * 2;
+//     return item;
+// })
+
+// то же самое:
+// let b = a.map(item => item * 2)// если в стрелочной функции только один параметр, можно обойтисьбез скобок
+
 let b = a.map((item, index) => {
-    console.log(item);
-    item = item * 2;
-    return item;
+    let c = 0;
+    if (item > 0) {
+        return index;
+    }
+    else{
+        return item;
+    }
 })
 
 console.log(b);
+
+// test Ebp
+let wordsList = ['привет','калькулятор','лампа','квадрат','круг',];
+
+document.querySelector('.btn').onclick = () => {
+  let inp = document.querySelectorAll('input');
+  // val = val.toLowerCase();
+  
+  for (let k = 0; k < wordsList.length; k++) {
+    let val = inp[k].value;
+    console.log(wordsList[k]);
+    console.log(val);
+    
+    if (val == wordsList[k]) {
+      inp[k].style.border = '1px solid green';
+    }
+    else{
+      inp[k].style.border = '1px solid red';
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+//
+
 
 // для решения задач используйте эти переменные
 let a1_res = [],
