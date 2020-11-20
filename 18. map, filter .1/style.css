@@ -1,28 +1,46 @@
-.wrapper{
+.wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 380px;
+  /* background: rgba(0, 255, 187, 0.308); */
 }
-.word-wrapper{
+
+.word-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.word{
-  width: 177px;
-  height: 21px;
+
+.word {
+  width: 185px;
+  height: 22px;
   margin: 2px 0;
-  border: 1px solid #000000;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 1px solid #bdbdbd;
+  text-align: center;
 }
-input{
+
+.inp {
   display: block;
-    width: 170px;
-    height: 17px;
+  width: 170px;
+  height: 17px;
   margin: 2px 0;
+  text-align: center;
+  background: transparent;
 }
-.btn{
+
+.btn {
   background: rgb(0, 225, 255);
   color: #ffffff;
   border: none;
   font-size: 30px;
+}
+
+.mistake {
+  background: rgba(255, 0, 0, 0.255);
+}
+
+.correctly {
+  background: rgba(1, 255, 56, 0.357);
 }

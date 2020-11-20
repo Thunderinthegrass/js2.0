@@ -1,5 +1,7 @@
 //код урока
+//map возвращает весь массив, если какие-то его элементы не соответствуют условиям, возвращает undefined.
 let a = [1, 35, 70, 57, 3000, -17, 15, -3, 0];
+let aa = [1, 3, 8, 'привет', 333, 8, 'здравствуйте',]
 // let b = a.map((item, index) => {
 //     console.log(item);
 //     item = item * 2;
@@ -11,39 +13,53 @@ let a = [1, 35, 70, 57, 3000, -17, 15, -3, 0];
 
 let b = a.map((item, index) => {
     let c = 0;
-    if (item > 0) {
+    if (item >= 0) {
         return index;
     }
-    else{
-        return item;
-    }
+    // else {
+    //     return item;
+    // }
 })
 
 console.log(b);
 
+//filter возвращает массив только с теми элементами, которые соответствуют условиям.
+let c = aa.filter((item, index) => {
+    // if (item >= 0) {
+    //     return item;
+    // }
+
+    if (typeof item == 'number') {
+        return item;
+    }
+})
+console.log(c);
+
 // test Ebp
-let wordsList = ['привет','калькулятор','лампа','квадрат','круг',];
+let wordsList = ['привет', 'калькулятор', 'лампа', 'квадрат', 'круг',];
 
 document.querySelector('.btn').onclick = () => {
-  let inp = document.querySelectorAll('input');
-  // val = val.toLowerCase();
-  
-  for (let k = 0; k < wordsList.length; k++) {
-    let val = inp[k].value;
-    console.log(wordsList[k]);
-    console.log(val);
-    
-    if (val == wordsList[k]) {
-      inp[k].style.border = '1px solid green';
+    let inp = document.querySelectorAll('.inp');
+
+    for (let k = 0; k < wordsList.length; k++) {
+        let val = inp[k].value;
+        val = val.toLowerCase();
+        val = val.trim();
+
+        if (val == wordsList[k]) {
+            inp[k].classList.remove('mistake');
+            inp[k].classList.add('correctly');
+        }
+        else {
+            inp[k].classList.remove('correctly');
+            inp[k].classList.add('mistake');
+        }
     }
-    else{
-      inp[k].style.border = '1px solid red';
-    }
-  }
 }
 
 
-
+// let zzz = 'HGHGTHHh';
+// console.log(zzz.toLowerCase());
 
 
 
