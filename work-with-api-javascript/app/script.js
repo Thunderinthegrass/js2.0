@@ -8,6 +8,9 @@ fetch('http://api.openweathermap.org/data/2.5/weather?id=2051523&appid=75aad53b2
         //https://openweathermap.org/img/wn/02d@2x.png
         document.querySelector('.features li').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png">`;
         document.querySelector('.wind').innerHTML = Math.round(data.wind.speed) + 'm/с';
+        let a = data.main.pressure;
+        a = a / 1.33322;
+        document.querySelector('.pressure').innerHTML = Math.round(a) + ' мм рт. ст.';
     })
     .catch(function () {
         // catch any errors

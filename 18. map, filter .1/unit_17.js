@@ -1,4 +1,5 @@
 //код урока
+//map и filter возвращают новый массив, исходный массив остаётся без изменений
 //map возвращает весь массив, если какие-то его элементы не соответствуют условиям, возвращает undefined.
 let a = [1, 35, 70, 57, 3000, -17, 15, -3, 0];
 let aa = [1, 3, 8, 'привет', 333, 8, 'здравствуйте',]
@@ -29,7 +30,7 @@ let c = aa.filter((item, index) => {
     //     return item;
     // }
 
-    if (typeof item == 'number') {
+    if (typeof item == 'string') {
         return item;
     }
 })
@@ -106,7 +107,11 @@ document.querySelector('.b-1').onclick = () => {
 let a2 = [2, 3, 4, 5, 10, 11, 12];
 
 function t2() {
-
+    a2_res = a2.map(item => {
+        item = Math.pow(item, 2);
+        return item;
+    })
+    return a2_res;
 }
 
 document.querySelector('.b-2').onclick = () => {
@@ -121,7 +126,11 @@ document.querySelector('.b-2').onclick = () => {
 let a3 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];
 
 function t3() {
-
+    a3_res = a.map(item => {
+        item = Number(item);
+        return item;
+    })
+    return a3_res;
 }
 
 document.querySelector('.b-3').onclick = () => {
