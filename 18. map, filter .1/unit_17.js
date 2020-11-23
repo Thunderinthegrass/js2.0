@@ -10,7 +10,7 @@ let aa = [1, 3, 8, 'привет', 333, 8, 'здравствуйте',]
 // })
 
 // то же самое:
-// let b = a.map(item => item * 2)// если в стрелочной функции только один параметр, можно обойтисьбез скобок
+// let b = a.map(item => item * 2)// если в стрелочной функции только один параметр, можно обойтись без скобок
 
 let b = a.map((item, index) => {
     let c = 0;
@@ -76,7 +76,6 @@ document.querySelector('.btn').onclick = () => {
 let a1_res = [],
     a2_res = [],
     a3_res = [],
-    a4_res = [],
     b1_res = [],
     b6_res = [],
     b7_res = [],
@@ -144,7 +143,19 @@ document.querySelector('.b-3').onclick = () => {
 let a4 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];
 
 function t4() {
-
+    let n = [];
+    let a4_res = a4.map(item => {
+        let c = 'number';
+        if (typeof item == c) {
+            return item;
+        }
+    })
+    for (let k = 0; k < a4_res.length; k++) {
+        if (a4_res[k] != undefined) {
+            n += a4_res[k] + ' ';
+        }
+    }
+    return n;
 }
 
 document.querySelector('.b-4').onclick = () => {
@@ -159,7 +170,12 @@ document.querySelector('.b-4').onclick = () => {
 let b1 = [3, 14, 15, 92];
 
 function t5() {
-
+    b1_res = b1.filter(item => {
+        if (item % 2 == 0) {
+            return item;
+        }
+    })
+    return b1_res;
 }
 
 document.querySelector('.b-5').onclick = () => {
@@ -174,7 +190,12 @@ document.querySelector('.b-5').onclick = () => {
 let b6 = [3, 14, 15, 92, "6", "5", "hello", 32];
 
 function t6() {
-
+    b6_res = b6.filter(item => {
+        if (typeof item == 'number') {
+            return item;
+        }
+    })
+    return b6_res;
 }
 
 document.querySelector('.b-6').onclick = () => {
@@ -188,7 +209,12 @@ document.querySelector('.b-6').onclick = () => {
 let b7 = ["php-7", "html", "css", 92, "6", "5", "hello", 32];
 
 function t7() {
-
+    b7_res = b7.filter(item => {
+        if (item.length >= 3) {
+            return item;
+        }
+    })
+    return b7_res;
 }
 
 document.querySelector('.b-7').onclick = () => {
@@ -201,7 +227,12 @@ document.querySelector('.b-7').onclick = () => {
 let b8 = [3, 14, 15, 92, "6", "5", "hello", 32];
 
 function t8() {
-
+    b8_res = b8.filter((item, index) => {
+        if (index % 2 == 0) {
+            return index;
+        }
+    })
+    return b8_res;
 }
 
 document.querySelector('.b-8').onclick = () => {
@@ -216,7 +247,16 @@ document.querySelector('.b-8').onclick = () => {
 let b9 = [3, "hello", 4, "world", 5, "hi"];
 
 function t9() {
-
+    b9_num = b9.filter(item => {
+        if (typeof item == 'number') {
+            return item;
+        }
+    })
+    b9_string = b9.filter(item => {
+        if (typeof item == 'string') {
+            return item;
+        }
+    })
     return [b9_num, b9_string];
 }
 
@@ -232,8 +272,14 @@ document.querySelector('.b-9').onclick = () => {
 let b10 = [[1, 2, 3], [3, 4, 6], [4, 5, 7], [8, 9, 3]]
 
 function t10() {
-
-
+    let b10_res = b10.filter(item => {
+        for (let k = 0; k < item.length; k++) {
+            if (item[k] == 3) {
+                return item;
+            }
+        }
+    })
+    return b10_res;
 }
 
 document.querySelector('.b-10').onclick = () => {
