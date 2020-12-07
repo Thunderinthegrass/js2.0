@@ -6,8 +6,37 @@ let btn = document.querySelector('.btn').onclick = function(event) {
 
 let btn1 = document.querySelector('.btn-1').ondblclick = function(event) {
   console.log(event);
-  console.log('click');
+  console.log('doubleclick');
 }
+
+document.querySelector('.btn-1').oncontextmenu = () => {
+  console.log('oncontextmenu');
+  return false;
+}
+
+let w = 50;
+document.querySelector('.btn-2').onmousemove = () => {
+  document.querySelector('.btn-2').style.width = w + 'px';
+  w++;
+}
+
+document.querySelector('.btn-3').onmouseenter = () => {
+  document.querySelector('.btn-3').style.background = 'red';
+}
+
+document.querySelector('.btn-3').onmouseleave = () => {
+  document.querySelector('.btn-3').style.background = 'green';
+}
+
+document.querySelector('.btn-3').onmousedown = () => {
+  document.querySelector('.btn-3').style.background = 'cyan';
+}
+
+document.querySelector('.btn-3').onmouseup = () => {
+  document.querySelector('.btn-3').style.background = 'purple';
+}
+
+
 
 
 // Task 1 ============================================
