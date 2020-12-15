@@ -1,10 +1,10 @@
 //код урока
-let btn = document.querySelector('.btn').onclick = function(event) {
+let btn = document.querySelector('.btn').onclick = function (event) {
   console.log(event);
   console.log('click');
 }
 
-let btn1 = document.querySelector('.btn-1').ondblclick = function(event) {
+let btn1 = document.querySelector('.btn-1').ondblclick = function (event) {
   console.log(event);
   console.log('doubleclick');
 }
@@ -36,23 +36,46 @@ document.querySelector('.btn-3').onmouseup = () => {
   document.querySelector('.btn-3').style.background = 'purple';
 }
 
+document.querySelector('.btn-4').onmouseover = () => {
+  document.querySelector('.btn-4').style.background = 'red';
+}
+
+document.querySelector('.btn-4').onmouseout = () => {
+  document.querySelector('.btn-4').style.background = 'green';
+}
+
 
 
 
 // Task 1 ============================================
 /* Добавьте на блок .div-1 событие клик и по клику запуск функции t1. Функция должна возвращать и выводить на экран содержимое блока (только текст). Вывод осуществляется в out-1.  */
-
+document.querySelector('.div-1').onclick = t1;
+document.querySelector('.div-1').ondblclick = hidden;
 function t1() {
+  document.querySelector('.out-1').innerHTML = document.querySelector('.div-1').innerHTML;
+}
+function hidden() {
+  document.querySelector('.out-1').innerHTML = '';
 }
 
 // ваше событие здесь!!!
 
 // Task 2 ============================================
 /*  Добавьте на блок .div-2 событие клик и по клику запуск функции t2. Функция должна возвращать true или false в зависимости от того, нажата ли клавиша alt или нет в момент клика. Также, выводите на экран результат. Вывод осуществляется в out-2. */
+let d2 = document.querySelector('.div-2')
+d2.onclick = t2;
 
-function t2() {
+let out2 = document.querySelector('.out-2')
 
-}
+function t2(event) {
+  let z = '';
+  if (event.altKey) {
+    out2.innerHTML = true;
+  }
+  else {
+    out2.innerHTML = false;
+  }
+} 
 
 // ваше событие здесь!!!
 
@@ -61,9 +84,42 @@ function t2() {
 /*  Добавьте на блок .div-3 событие клик. При клике - увеличивайте ширину блока на 5px. Каждый клик - увеличение ширины на 5px. 10 кликов - на 50px. Ширину выводите в out-3. */
 
 let w3 = 75;
+let d3 = document.querySelector('.div-3');
+let b = 10;
+let g = 10;
 
-function t3() {
+let up = document.querySelector('.up');
+let down = document.querySelector('.down');
+let right = document.querySelector('.right');
+let left = document.querySelector('.left');
 
+up.onclick = toUp;
+down.onclick = toDown;
+right.onclick = toRight;
+left.onclick = toLeft;
+
+function toUp() {
+  w3 = w3 + 5;
+  b = b + 10;
+  d3.style.height = `${w3}px`;
+  d3.style.background = `#0000${b}`;
+}
+
+function toDown() {
+  w3 = w3 - 5;
+  d3.style.height = `${w3}px`;
+}
+
+function toRight() {
+  w3 = w3 + 5;
+  g = g + 10;
+  d3.style.width = `${w3}px`;
+  d3.style.background = `#00${g}00`;
+}
+
+function toLeft() {
+  w3 = w3 - 5;
+  d3.style.width = `${w3}px`;
 }
 
 // ваше событие здесь!!!
@@ -72,17 +128,29 @@ function t3() {
 // Task 4 ============================================
 /*  Добавьте на блок .div-4 событие двойной клик и по двойному клику запуск функции t4. Функция должна возвращать и выводить на экран содержимое блока (только текст). Вывод осуществляется в out-4. */
 
-function t4() {
+let d4 = document.querySelector('.div-4');
+d4.ondblclick = t4;
+let out4 = document.querySelector('.out-4');
 
+function t4() {
+  out4.innerHTML = d4.textContent;
 }
 
 // ваше событие здесь!!!
 
 // Task 5 ============================================
 /*  Дан блок .div-5.active. Добавьте на него событие двойной клик, по которому удалется класс active если он есть и добавляется если такого класса нет. */
+let d5 = document.querySelector('.div-5');
+d5.ondblclick = t5;
+let out5 = document.querySelector('.out-5');
 
 function t5() {
-
+  if (d5.classList.contains('active')) {
+    d5.classList.remove('active');
+  }
+  else {
+    d5.classList.add('active');
+  }
 }
 
 // ваше событие здесь!!!
