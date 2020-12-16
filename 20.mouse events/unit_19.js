@@ -158,8 +158,17 @@ function t5() {
 // Task 6 ============================================
 /*  Дан блок .div-6 и список .ul-6. При двойном клике на блоке скрывайте .ul-6 еcли он показан и показывайте если скрыт. Скрытие и показ делайте через добавление - удаление класса .hide */
 
-function t6() {
+let d6 = document.querySelector('.div-6');
+let ul6 = document.querySelector('.ul-6');
+d6.onclick = t6;
 
+function t6() {
+    if (ul6.classList.contains('hide')) {
+      ul6.classList.remove('hide');
+    }
+    else{
+      ul6.classList.add('hide');
+    }
 }
 
 // ваше событие здесь!!!
@@ -168,8 +177,18 @@ function t6() {
 // Task 7 ============================================
 /*  Дан блок .div-7. При клике правой кнопкой мыши на блоке добавляйте ему класс .active. При повторном клике - удаляйте. */
 
-function t7() {
+let d7 = document.querySelector('.div-7');
+d7.onmousedown = t7;
+d7.oncontextmenu = () => {
+  return false;
+};
+let out7 = document.querySelector('.out-7');
 
+function t7(event) {
+  if (event.which == 3) {
+    out7.classList.toggle('active');
+  }
+  console.log(event.which);
 }
 
 // ваше событие здесь!!!
@@ -177,8 +196,22 @@ function t7() {
 // Task 8 ============================================
 /*  Дано checkbox .ch-8. Повесьте на него событие onchange при котором на документе отключается клик правой кнопкой мыши если checkbox выбран и отключает если не выбран. */
 
-function t8() {
+let ch8 = document.querySelector('.ch-8');
+ch8.onchange = t8;
+let html = document.querySelector('html');
 
+function t8() {
+  console.log('привет');
+  if (ch8.checked) {
+    html.oncontextmenu = () => {
+      return false;
+    }
+  }
+  else {
+    html.oncontextmenu = () => {
+      return true;
+    }
+  }
 }
 
 // ваше событие здесь!!!
@@ -187,8 +220,14 @@ function t8() {
 // Task 9 ============================================
 /*  Дан блок .div-9. Внутри блока - изображение 1.png. При клике правой кнопкой мыши  - меняйте изображение на 2.png. Надеюсь вы догадаетесь изменить только src изображения? */
 
-function t9() {
+let d9 = document.querySelector('.div-9');
+d9.onmousedown = t9;
+let img = document.querySelector('.div-9 img');
 
+function t9(event) {
+  if (event.which == 3) {
+    img.setAttribute('src', 'img/2.png');
+  }
 }
 
 // ваше событие здесь!!!
@@ -197,8 +236,17 @@ function t9() {
 // Task 10 ============================================
 /*  Дан блок .div-10. Внутри блока - изображение 1.png. При наведении мыши (mouseenter)  - меняйте изображение на 2.png. */
 
-function t10() {
+let d10 = document.querySelector('.div-10');
+d10.onmouseenter = t10;
+d10.onmouseleave = t101;
+let img10 = document.querySelector('.div-10 img');
 
+function t10() {
+  img10.setAttribute('src', 'img/2.png');
+}
+
+function t101() {
+  img10.setAttribute('src', 'img/1.png');
 }
 
 // ваше событие здесь!!!
@@ -206,8 +254,17 @@ function t10() {
 // Task 11 ============================================
 /*  Дан блок .div-11. Внутри блока - изображение 1.png. При наведении мыши (mouseenter)  - меняйте изображение на 2.png. При уведении мыши - mouseleave - возвращайте исходное изображение. */
 
-function t11() {
+let d11 = document.querySelector('.div-11');
+d11.onmouseenter = t11;
+d11.onmouseleave = t111;
+let img11 = document.querySelector('.div-11 img');
 
+function t11() {
+  img11.setAttribute('src', 'img/2.png');
+}
+
+function t111() {
+  img11.setAttribute('src', 'img/1.png');
 }
 
 // ваше событие здесь!!!
@@ -215,9 +272,10 @@ function t11() {
 // Task 12 ============================================
 /*  Дан блок .div-12. Добавьте на него событие mousedown - при нажатии кнопки мыши - добавляйте ему класс active. */
 
-// () => {
-
-// }
+let d12 = document.querySelector('.div-12');
+d12.onmousedown = () => {
+  d12.classList.toggle('active');
+}
 
 // ваше событие здесь!!!
 
@@ -225,21 +283,25 @@ function t11() {
 // Task 13 ============================================
 /*  Дан блок .div-13. Добавьте на него событие mousedown - при нажатии кнопки мыши - добавляйте ему класс active. Добавьте ему событие mouseup - при отпускании мыши - удаляйте класс active. */
 
-// () =>  {
+let d13 = document.querySelector('.div-13');
 
-// }
+d13.onmousedown = () =>  {
+  d13.classList.add('active');
+}
 
-// () =>  {
-
-// }
+d13.onmouseup = () =>  {
+  d13.classList.remove('active');
+}
 // ваше событие здесь!!!
 
 
 // Task 14 ============================================
 /*  Дан блок .div-14. При нажатии кнопки b-14 добавляйте к нему событие onclick - которое, при клике добавляем блоку div-14 класс active. */
 
-function t14() {
+let d14 = document.querySelector('.div-14');
 
+function t14() {
+  d14.classList.toggle('active');
 }
 document.querySelector('.b-14').onclick = t14;
 
@@ -247,8 +309,13 @@ document.querySelector('.b-14').onclick = t14;
 // Task 15 ============================================
 /*  Дан блок .div-15. Добавьте на него событие move. При каждом движении мыши увеличивайте число внутри на 1. */
 
-function t15() {
+let d15 = document.querySelector('.div-15');
+d15.onmousemove = t15;
+let inOut = 1;
 
+function t15() {
+  inOut += 1;
+  d15.innerHTML = inOut;
 }
 // ваше событие здесь!!!
 
@@ -256,19 +323,32 @@ function t15() {
 // Task 16 ============================================
 /*  Дан блок .div-16. Добавьте на него событие move. При каждом движении мыши увеличивайте ширину блока на 1px. */
 
-function t16() {
+let d16 = document.querySelector('.div-16');
+d16.onmousemove = t16;
+let wid = 71;
 
+function t16() {
+  console.log(wid);
+  d16.style.width = `${wid}px`;
+  wid++;
 }
 // ваше событие здесь!!!
 
 // Task 17 ============================================
 /*  Дано две кнопки - b-17_on и b-17_off. Напишите фукнции t17On и t17Off которые включают и отключают событие move в задании 16. */
 
+let bOn = document.querySelector('.b-17_on');
+let bOff = document.querySelector('.b-17_off');
+
+bOn.onclick = t17On;
+bOff.onclick = t17Off;
+
 function t17On() {
-
+  d16.onmousemove = t16;
 }
-function t17Off() {
 
+function t17Off() {
+  d16.onmousemove = t15;
 }
 // ваше событие здесь!!!
 // ваше событие здесь!!!
