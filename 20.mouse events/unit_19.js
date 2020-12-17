@@ -325,7 +325,8 @@ function t15() {
 
 let d16 = document.querySelector('.div-16');
 d16.onmousemove = t16;
-let wid = 71;
+let wid = d16.offsetWidth;
+console.log(wid);
 
 function t16() {
   console.log(wid);
@@ -335,7 +336,7 @@ function t16() {
 // ваше событие здесь!!!
 
 // Task 17 ============================================
-/*  Дано две кнопки - b-17_on и b-17_off. Напишите фукнции t17On и t17Off которые включают и отключают событие move в задании 16. */
+/*  Дано две кнопки - b-17_on и b-17_off. Напишите функнции t17On и t17Off которые включают и отключают событие move в задании 16. */
 
 let bOn = document.querySelector('.b-17_on');
 let bOff = document.querySelector('.b-17_off');
@@ -354,18 +355,24 @@ function t17Off() {
 // ваше событие здесь!!!
 
 // Task 18 ============================================
-/*  Дан блок div-18. Напишите фукнцию t18 которая выводит в данный блок его ширину при событии onmouseenter. */
+/*  Дан блок div-18. Напишите функнцию t18 которая выводит в данный блок его ширину при событии onmouseenter. */
+
+let d18 = document.querySelector('.div-18');
+d18.onmouseleave = t18;
 
 function t18() {
-
+  d18.innerHTML = d18.offsetWidth;
 }
 // ваше событие здесь!!!
 
 // Task 19 ============================================
-/*  Дан блок div-19. Напишите фукнцию t19 которая выводит в данный блок его классы при событии onmouseout. */
+/*  Дан блок div-19. Напишите функнцию t19 которая выводит в данный блок его классы при событии onmouseout. */
+
+let d19 = document.querySelector('.div-19');
+d19.onmouseout = t19;
 
 function t19() {
-
+  d19.innerHTML = d19.classList;
 }
 // ваше событие здесь!!!
 
@@ -373,7 +380,13 @@ function t19() {
 // Task 20 ============================================
 /*  Дан элемент progress. Напишите фукнцию t20 которая увеличивает его value на 1 при каждом событии mousemove внутри progress. */
 
-function t20() {
+let d20 = document.querySelector('progress');
+d20.onmousemove = t20;
+let z = d20.getAttribute('value');
 
+function t20() {
+  console.log(z);
+  d20.setAttribute('value', z);
+  z++;
 }
 // ваше событие здесь!!!
