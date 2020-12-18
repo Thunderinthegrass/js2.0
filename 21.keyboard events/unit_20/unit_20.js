@@ -20,11 +20,40 @@ document.querySelector('.inp').onkeypress = function(event) {
 //     zz++;
 // }
 
+document.querySelector('.inp').onkeydown = rt;
+function rt(event) {
+    console.log('keyudown');
+    console.log(event);
+    console.log('charCode:' + event.charCode);
+    console.log('code:' + event.code);
+
+    console.log('key:' + event.key);
+    console.log('keyCode:' + event.keyCode);
+    out0.textContent += event.key;
+}
+
+document.querySelector('.inp').onkeyup = function(event) {
+    console.log('keyup');
+    console.log(event);
+    console.log('charCode:' + event.charCode);
+    console.log('code:' + event.code);
+
+    console.log('key:' + event.key);
+    console.log('keyCode:' + event.keyCode);
+    out0.textContent += event.key;
+}
+//onkeypress срабатывает только на буквах, цифрах и символах, onkeydown и onkeyup на всех клавишах.
+
 
 // Task 1 ============================================
 /* Дан input .i-1. Напишите функцию t1, которая выводит в .out-1 символ и возвращает его. Во всех последующих задачах - работаем с латиницей и цифрами.*/
+let inp1 = document.querySelector('.i-1');
+let out1 = document.querySelector('.out-1');
+inp1.onkeypress = t1;
 
-function t1() {
+function t1(event) {
+    out1.innerHTML = event.key;
+    return event.key;
 }
 
 // ваше событие здесь!!!
@@ -32,8 +61,13 @@ function t1() {
 // Task 2 ============================================
 /*  Дан input .i-2. Напишите функцию t2, которая выводит в .out-2 код символа и возвращает его. */
 
-function t2() {
+let inp2 = document.querySelector('.i-2');
+let out2 = document.querySelector('.out-2');
+inp2.onkeypress = t2;
 
+function t2(e) {
+    out2.innerHTML = e.keyCode;
+    return e.keyCode;
 }
 
 // ваше событие здесь!!!
@@ -44,8 +78,19 @@ function t2() {
 
 let w3 = 75;
 
-function t3() {
+let inp3 = document.querySelector('.i-3');
+let out3 = document.querySelector('.out-3');
+inp3.onkeypress = t3;
 
+function t3(e) {
+    let z = e.keyCode;
+    if (z < 48 || z > 57) {
+        out3.innerHTML = true;
+    }
+    else {
+        out3.innerHTML = false;
+    }
+    console.log(z);
 }
 
 // ваше событие здесь!!!
