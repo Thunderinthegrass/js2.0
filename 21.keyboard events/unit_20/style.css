@@ -28,3 +28,27 @@ section {
     background: #000;
     color: rgb(255, 255, 255);
 }
+
+/* keyboard */
+.keyboard__row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.keyboard__btn{
+    border: 1px solid #000000;
+    border-radius: 2px;
+    margin: 2px;
+    padding: 3px 15px;
+    font-size: 20px;
+    line-height: 40px;
+}
+.keyboard__row .btn-min{
+    font-size: 17px;
+}
+.keyboard__row .space{
+    padding: 3px 102px;
+}
+.keyboard__row .shift{
+    padding: 3px 48px;
+}

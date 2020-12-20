@@ -1,6 +1,6 @@
 //код урока
 let out0 = document.querySelector('.out0');
-document.querySelector('.inp').onkeypress = function(event) {
+document.querySelector('.inp').onkeypress = function (event) {
     // console.log(event);
     // console.log('charCode:' + event.charCode);
     // console.log('code:' + event.code);
@@ -32,7 +32,7 @@ function rt(event) {
     out0.textContent += event.key;
 }
 
-document.querySelector('.inp').onkeyup = function(event) {
+document.querySelector('.inp').onkeyup = function (event) {
     console.log('keyup');
     console.log(event);
     console.log('charCode:' + event.charCode);
@@ -99,8 +99,16 @@ function t3(e) {
 // Task 4 ============================================
 /*  Дан input .i-4. Напишите функцию t4, которая выводит в .out-4 только символы в нижнем регистре. Т.е. ввели ab4Bci в out получаем ab4bci. */
 
-function t4() {
+let inp4 = document.querySelector('.i-4');
+let out4 = document.querySelector('.out-4');
+inp4.onkeypress = t4;
 
+function t4(e) {
+    let z = e.key;
+    let x = z.toLowerCase();
+    if (z == x) {
+        out4.innerHTML = z;
+    }
 }
 
 // ваше событие здесь!!!
@@ -108,8 +116,14 @@ function t4() {
 // Task 5 ============================================
 /*  Дан input .i-5. Напишите функцию t5, которая выводит в .out-5 все вводимые символы в верхнем регистре. Т.е. пользователь ввел AbCd и функция выведет ABCD. */
 
-function t5() {
+let inp5 = document.querySelector('.i-5');
+let out5 = document.querySelector('.out-5');
+inp5.onkeypress = t5;
 
+function t5(e) {
+    let z = e.key;
+    let x = z.toUpperCase();
+    out5.innerHTML = x;
 }
 
 // ваше событие здесь!!!
@@ -117,8 +131,14 @@ function t5() {
 // Task 6 ============================================
 /*  Дан input .i-6. Напишите функцию t6, которая выводит в .i-6 только символы в нижнем регистре.  */
 
-function t6() {
+let inp6 = document.querySelector('.i-6');
+let out6 = document.querySelector('.out-6');
+inp6.onkeypress = t6;
 
+function t6(e) {
+    let z = e.key;
+    let x = z.toLowerCase();
+    out6.innerHTML = x;
 }
 
 // ваше событие здесь!!!
@@ -127,9 +147,19 @@ function t6() {
 // Task 7 ============================================
 /*  Дан input .i-7. Напишите функцию t7, которая выводит в .out-7 случаный символ из массива a7 при каждом вводе символа. */
 
-function t7() {
-    const a7 = [];
+let inp7 = document.querySelector('.i-7');
+let out7 = document.querySelector('.out-7');
+inp7.onkeypress = t7;
 
+function t7(e) {
+    const a7 = ['Привет', 'Добрый вечер', 'Почисть картошку', 'Мне нужен гараж', 'Миру мир', 'Как называется ваше дырявое корыто?', 'Тайны вселенной', 'Нет ночи без звёзд'];
+    let z = a7.length + 1;
+    console.log(Math.floor(Math.random() * z));
+    let x = Math.floor(Math.random() * z);
+
+    if (e.key) {
+        out7.innerHTML = a7[x];
+    }
 }
 
 // ваше событие здесь!!!
@@ -137,8 +167,23 @@ function t7() {
 // Task 8 ============================================
 /*  Дан input .i-8. Напишите функцию t8, которая выводит в .out-8 вводимый в input текст, но заменяет i на 1, o на 0, l на 7. */
 
-function t8() {
+let inp8 = document.querySelector('.i-8');
+let out8 = document.querySelector('.out-8');
+inp8.onkeypress = t8;
 
+function t8(e) {
+    let z = e.key;
+    if (z == 'i') {
+        z = 1;
+    }
+    else if (z == 'o') {
+        z = 0;
+    }
+    else if (z == 'l') {
+        z = 7;
+    }
+
+    out8.innerHTML += z;
 }
 
 // ваше событие здесь!!!
@@ -147,8 +192,17 @@ function t8() {
 // Task 9 ============================================
 /* Дан input .i-9. Напишите функцию t8, выводит в .out-9 количество нажатых клавиш стрелка вниз. */
 
-function t9() {
+let inp9 = document.querySelector('.i-9');
+let out9 = document.querySelector('.out-9');
+inp9.onkeydown = t9;
+let x = 0;
 
+function t9(e) {
+    let z = e.key;
+    if (z == 'ArrowDown') {
+        x++;
+        out9.innerHTML = x;
+    }
 }
 
 // ваше событие здесь!!!
@@ -157,8 +211,30 @@ function t9() {
 // Task 10 ============================================
 /*  Дан input .i-10 и изображение 1.png. Добавьте событие на input, при нажатии клавиш стрелка вправо и стрелка влево увеличивать ширину изображения. Клавиши стрелка вверх и вниз - увеличивать высоту изображения. Одно нажатие клавиши - 1px. */
 
-function t10() {
+let inp10 = document.querySelector('.i-10');
+let div10 = document.querySelector('.div-10');
+inp10.onkeydown = t10;
 
+function t10(e) {
+    let z = e.key;
+    let w = div10.offsetWidth;
+    let h = div10.offsetHeight;
+    if (z == 'ArrowUp') {
+        div10.style.height = `${h + 1}px`;
+        console.log(h);
+    }
+    else if (z == 'ArrowDown') {
+        div10.style.height = `${h - 1}px`;
+        console.log(h);
+    }
+    else if (z == 'ArrowLeft') {
+        div10.style.width = `${w - 1}px`;
+        console.log(w);
+    }
+    else if (z == 'ArrowRight') {
+        div10.style.width = `${w + 1}px`;
+        console.log(w);
+    }
 }
 
 // ваше событие здесь!!!
