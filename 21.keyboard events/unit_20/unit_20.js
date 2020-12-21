@@ -214,6 +214,7 @@ function t9(e) {
 let inp10 = document.querySelector('.i-10');
 let div10 = document.querySelector('.div-10');
 inp10.onkeydown = t10;
+inp10.onkeypress = t10;
 
 function t10(e) {
     let z = e.key;
@@ -247,8 +248,28 @@ function t10(e) {
 4. Ограничения проекта – тестируются только указанные клавиши в латинской раскладке. Комбинации клавиш не тестируются. Т.е. нажиматься shift+A, ctrl+shift – не будут. Все символы вводятся в нижнем регистре.
 */
 
-function t11() {
+let inp11 = document.querySelector('.i-11');
+let out11 = document.querySelector('.out-11');
+inp11.onkeydown = t11;
 
+let keyBtn = document.querySelectorAll('.keyboard__btn');
+
+function t11(e) {
+    let z = e.key;
+    let x = e.code;
+    for (let i = 0; i < keyBtn.length; i++) {
+        if (z == keyBtn[i].innerHTML) {
+            keyBtn[i].classList.add('active');
+            console.log(z);
+        }
+        else if (x == keyBtn[i].innerHTML) {
+            keyBtn[i].classList.add('active');
+            console.log(x);
+        }
+        else {
+            keyBtn[i].classList.remove('active');
+        }
+    }
 }
 
 // ваше событие здесь!!!
