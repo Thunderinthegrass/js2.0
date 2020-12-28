@@ -26,3 +26,64 @@ section {
     width: 30px;
     height: 30px;
 }
+
+/* animation */ 
+.gear-wrapper{
+    width: 600px;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+.gear{
+    width: 300px;
+    position: absolute;
+}
+/* .gear-1{
+    width: 300px;
+    animation: gear-1 20s linear infinite;
+} */
+.gear-1{
+    width: 500px;
+    animation: gear-1 8s linear infinite;
+}
+.gear-2{
+    width: 430px;
+    animation: gear-2 8s linear infinite;
+    left: 468px;
+    top: 53px;
+    transform: rotate(8deg);
+}
+.walking-gear{
+    width: 300px;
+    animation: walking-gear 2s linear infinite;
+}
+.walking-gear .cls-2{
+    fill: #fff800;
+}
+.walking-gear .cls-1{
+    fill: #bc0404;
+}
+@keyframes walking-gear {
+    0%{
+        
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes gear-2 {
+    0%{
+
+    }
+    100%{
+        transform: rotate(-352deg);
+    }
+}
+@keyframes gear-1 {
+    0%{
+        
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
