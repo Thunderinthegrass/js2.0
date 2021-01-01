@@ -3,7 +3,7 @@ function bgRed() {
   document.querySelector('.h2red').style.color = 'red';
 }
 
-document.querySelector('.h3red').onclick = function() {
+document.querySelector('.h3red').onclick = function () {
   document.querySelector('.h3red').style.color = 'red';
   console.log(this);//выведет элемент h3
 }
@@ -18,7 +18,7 @@ function hi() {
   console.log('hi');
 }
 
-document.querySelector('.h4').onclick = function() {
+document.querySelector('.h4').onclick = function () {
   hello();
   hi();
 }
@@ -129,8 +129,14 @@ function t3(e) {
 // Task 4 ============================================
 /*  Создайте блок div-4. И кнопку b-4. При нажатии кнопки - добавляйте событие ontouchstart на блок div-4. При событии происходит вывод текста touch в out-4.  */
 
-function t4() {
+let d4 = document.querySelector('.div-4');
+let btn4 = document.querySelector('.b-4');
+let out4 = document.querySelector('.out-4');
 
+btn4.addEventListener('touchstart', t4);
+
+function t4() {
+  out4.innerHTML += 'text';
 }
 
 // ваше событие здесь!!!
@@ -138,17 +144,22 @@ function t4() {
 // Task 5 ============================================
 /*  Дана кнопка b-5. При ее нажатии очищайте событие ontouchstart на блоке div-4. */
 
-function t5() {
+let btn5 = document.querySelector('.b-5');
+btn5.onclick = t5;
 
+function t5() {
+  btn4.removeEventListener('touchstart', t4);
 }
 
 // ваше событие здесь!!!
 
 // Task 6 ============================================
 /*  Добавьте событие ontouchend на div-4. При его срабатывании выведите в out-6 слово touchend. */
+btn4.addEventListener('touchend', t6);
+let out6 = document.querySelector('.out-6');
 
 function t6() {
-
+  out6.innerHTML += 'touchend';
 }
 
 // ваше событие здесь!!!
@@ -157,8 +168,11 @@ function t6() {
 // Task 7 ============================================
 /*  Дан блок div-7. Добавьте событие touch, при срабатывании которого окрашивайте блок в красный цвет. */
 
-function t7() {
+let d7 = document.querySelector('.div-7');
+d7.addEventListener('touchstart', t7);
 
+function t7() {
+  d7.style.backgroundColor = '#ff0000';
 }
 
 // ваше событие здесь!!!
@@ -166,8 +180,15 @@ function t7() {
 // Task 8 ============================================
 /*  Дан блок div-8. Добавьте на него событие touch, которое при срабатывании окрашивает блок случаным цветом из массива a8=[red, green, blue, orange, pink, yellow] */
 
-function t8() {
+let d8 = document.querySelector('.div-8');
+let a8 = ['red', 'green', 'blue', 'orange', 'pink', 'yellow'];
 
+d8.addEventListener('touchstart', t8);
+
+function t8() {
+  let z = Math.floor(Math.random() * Math.floor(5));
+  console.log(z);
+  d8.style.backgroundColor = a8[z];
 }
 
 // ваше событие здесь!!!
@@ -186,8 +207,13 @@ function t9() {
 // Task 10 ============================================
 /*  Дан блок div-10. Добавьте на него событие touchmove. При срабатывании события - увеличивайте его ширину на 1. */
 
-function t10() {
+let d10 = document.querySelector('.div-10');
+d10.addEventListener('touchstart', t10);
 
+function t10() {
+  let z = d10.offsetWidth;
+  // console.log(z);
+  d10.style.width = `${z + 1}px`;
 }
 
 // ваше событие здесь!!!
@@ -195,8 +221,13 @@ function t10() {
 // Task 11 ============================================
 /*  Дан блок div-11. Добавьте на него событие touch. При срабатывании выводите радиус события radiusX, radiusY. */
 
-function t11() {
+let d11 = document.querySelector('.div-11');
+d11.addEventListener('touchmove', t11);
+let out11 = document.querySelector('.out-11');
 
+function t11(e) {
+  let z = e.touches.length;
+  out11.innerHTML = z;
 }
 
 // ваше событие здесь!!!
@@ -212,19 +243,55 @@ function t11() {
 */
 
 const images = document.querySelectorAll('.img-12-min');
-let count = 0; // переменная, которая указывает на номер активного изображения в images
+const imagesBig = document.querySelector('.img-12-max');
+let count = 1; // переменная, которая указывает на номер активного изображения в images
 
-const next = document.querySelectorAll('.next');
+const next = document.querySelector('.next');
 next.onclick = nextFunction;
 
-const prev = document.querySelectorAll('.prev');
+const prev = document.querySelector('.prev');
 prev.onclick = prevFunction;
 
 function nextFunction() {
+  for (let i = 0; i < images.length; i++) {
+    images[i].classList.remove('active-img');
+  }
+
+  if (count+1 == images.length) {
+    count = 0;
+  }
+  else{
+    count++;
+  }
+  
+  console.log(`count = ${count}`);
+  images[count].classList.add('active-img');
+
+  let imageBigAttr = `img/${count+1}.png`;
+  console.log(imageBigAttr);
+  imagesBig.setAttribute('src', `img/${count+1}.png`);
 
 }
 
+
 function prevFunction() {
+  for (let i = 0; i < images.length; i++) {
+    images[i].classList.remove('active-img');
+  }
+
+  if (count == 0) {
+    count = images.length-1;
+  }
+  else{
+    count--;
+  }
+
+  console.log(`count = ${count}`);
+  images[count].classList.add('active-img');
+
+  let imageBigAttr = `img/${count+1}.png`;
+  console.log(imageBigAttr);
+  imagesBig.setAttribute('src', `img/${count+1}.png`);
 
 }
 
