@@ -147,3 +147,146 @@
 //   t = parseInt(t);
 //   console.log(t);
 // }
+
+// JavaScript получаем данные из input, select, checkbox, range, radio, textarea, form-----------------------------------------------------------------------------------------------------------------------------------------
+//1.text
+document.querySelector('.b-1').addEventListener('click', ()=>{
+  let i1 = document.querySelector('.i-1').value;
+  document.querySelector('.out-1').innerHTML = i1;
+  //document.querySelector('.i-1').value = 'Привет';//записываем значение
+})
+
+//2.number
+document.querySelector('.b-2').addEventListener('click', ()=>{
+  let i1 = document.querySelector('.i-2').value;//получаем всё равно строку, потому что в html нет типов данных, и всё, что мы оттуда получаем - строка
+  document.querySelector('.out-2').innerHTML = i1;
+  //document.querySelector('.i-2').value = 'Привет';//записываем значение
+})
+
+//3.color
+document.querySelector('.b-3').addEventListener('click', ()=>{
+  let i3 = document.querySelector('.i-3').value;//получаем всё равно строку, потому что в html нет типов данных, и всё, что мы оттуда получаем - строка
+  document.querySelector('.out-3').innerHTML = i3;
+  //document.querySelector('.i-2').value = 'Привет';//записываем значение
+  //#08f7e7
+})
+
+//4.date
+document.querySelector('.b-4').addEventListener('click', ()=>{
+  let i4 = document.querySelector('.i-4').value;
+  document.querySelector('.out-4').innerHTML = i4;
+  //document.querySelector('.i-4').value = 'Привет';//записываем значение
+})
+
+//5.range
+document.querySelector('.b-5').addEventListener('click', ()=>{
+  let i5 = document.querySelector('.i-5').value;
+  document.querySelector('.out-5').innerHTML = i5;
+})
+
+document.querySelector('.i-5').addEventListener('input', ()=>{
+  let i5 = document.querySelector('.i-5').value;
+  document.querySelector('.out-5').innerHTML = i5;
+})
+
+
+//6.checkbox
+document.querySelector('.b-6').addEventListener('click', ()=>{
+  let i6 = document.querySelector('.i-6');
+  if (i6.checked) {
+    document.querySelector('.out-6').innerHTML = 'Выбрано';
+  }
+  else {
+    document.querySelector('.out-6').innerHTML = 'Не выбрано';
+  }
+  //document.querySelector('.i-5').value = 'Привет';//записываем значение
+})
+
+document.querySelector('.b-6-1').addEventListener('click', ()=> {
+  if(document.querySelector('.i-6').checked) {
+    document.querySelector('.i-6').checked = false;
+  }
+  else{
+    document.querySelector('.i-6').checked = true;
+  }//сделали по нажатию кнопки включение и сброс checked
+  
+})
+
+
+//7.radio
+document.querySelector('.b-7').addEventListener('click', ()=>{
+
+  let radio = document.querySelectorAll('.i-7');
+  // radio[2].checked = true;//так тоже можно
+
+  for (let i = 0; i < radio.length; i++) {
+    // let data = radio[i].value;
+    // out7.innerHTML = data;
+    if (radio[i].checked) {
+      data = radio[i].value;
+      break;
+    }
+  }
+  document.querySelector('.out-7').innerHTML = data;
+})
+
+
+
+//8.password
+document.querySelector('.b-8').addEventListener('click', ()=>{
+  let i8 = document.querySelector('.i-8').value;
+
+  document.querySelector('.out-8').innerHTML = i8;
+})
+
+
+
+//9.email
+document.querySelector('.b-9').addEventListener('click', ()=>{
+  let i9 = document.querySelector('.i-9').value;
+
+  let z = 0;
+
+  for (let i = 0; i < i9.length; i++) {
+    if (i9[i] != '@') {
+      z++;
+    }
+    if (z == i9.length) {
+      document.querySelector('.out-9').innerHTML = 'Введите корректный E-mail';
+    }
+    else {
+      document.querySelector('.out-9').innerHTML = '';
+    }//проверка на ввод емэйла
+  }
+
+  // document.querySelector('.out-9').innerHTML = i9;
+})
+
+
+//select
+document.querySelector('.b-10').addEventListener('click', ()=>{
+  let i10 = document.querySelector('.s-10').value;
+
+  document.querySelector('.out-10').innerHTML = i10;
+
+  // document.querySelector('.s-10').value = '2';//теперь по умолчанию будет выбран селект номер 2
+})
+
+
+document.querySelector('.b-11').addEventListener('click', ()=>{
+  let i11 = document.querySelector('.i-11').value;
+
+  document.querySelector('.out-11').innerHTML = i11;
+
+  // document.querySelector('.i-11').value = '2';//теперь по умолчанию будет выбран селект номер 2
+})
+
+
+//form
+document.querySelector('form').addEventListener('submit', (event)=>{
+  event.preventDefault();//предотвращает перезагрузку страницы
+  const form = document.querySelector('form');
+  console.dir(form.elements.myinput.value);
+  console.dir(form.elements);
+  form.reset();//очистить форму, Чтоб не прописывать каждому элементу value = '';
+})
